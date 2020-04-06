@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { css } from '@emotion/core';
-import { rhythm } from '../utils/typography';
 import Layout from '../components/layout';
 
 export default () => {
@@ -28,7 +27,6 @@ export default () => {
             }
         `
     );
-    console.log(data);
     return(
         <Layout>
             <div>
@@ -41,9 +39,7 @@ export default () => {
                 <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
                 {data.allMarkdownRemark.edges.map(({node}) => (
                     <div key={node.id}>
-                        <h3 css={css `
-                            margin-bottom: ${rhythm(1 / 4)};
-                        `}>
+                        <h3>
                             {node.frontmatter.title}{" "}
                             <span css={css `
                                 color: #bbb;
@@ -54,6 +50,21 @@ export default () => {
                         <p>{node.excerpt}</p>
                     </div>
                 ))}
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+                <p>TEXTTTTTTTTTTTTTTT</p>
+
             </div>
         </Layout>
     );
