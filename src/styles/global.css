@@ -19,5 +19,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 li {
-    margin-bottom: auto;
+    margin-bottom: inherit;
 }
