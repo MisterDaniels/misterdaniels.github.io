@@ -1,6 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Layout from '../components/layout';
 
 export default () => {
     const data = useStaticQuery(
@@ -21,7 +20,6 @@ export default () => {
     );
     console.log(data);
     return (
-        <Layout>
             <div>
                 <h1>My Site's Files</h1>
                 <table>
@@ -45,6 +43,5 @@ export default () => {
                     </tbody>
                 </table>
             </div>
-        </Layout>
     );
 }
