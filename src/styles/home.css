@@ -1,0 +1,276 @@
+.top-design {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1022px;
+    height: 899px;
+    z-index: -1;
+}
+
+.top-design.front {
+    transform: translate(0.4%, -2.5%);
+}
+
+#top .top-left {
+    margin-top: 30%;
+}
+
+#top .top-left .invitation {
+    margin-top: 30px;
+    color: #A2A2A2;
+}
+
+#top .experience-area {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: line;
+    justify-content: space-between;
+}
+
+.experience-area .role-item .detail {
+    display: flex;
+    flex-direction: line;
+}
+
+.experience-area .role-item .title {
+    margin-bottom: 10px;
+}
+
+.experience-area .role-item .detail .time {
+    margin-left: 20px;
+}
+
+.experience-area .role-item .detail .time-desc {
+    font-size: 20px;
+    font-weight: 400;
+    color: #A2A2A2;
+}
+
+.description-card {
+    width: 100%;
+    margin-top: 8%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.description-card .text-content {
+
+}
+
+.description-card .text-content h1 {
+    margin-bottom: 4%;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.description-card .text-content p {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.description-card .image-content {
+    margin-left: 10%;
+}
+
+.navigation-tool {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 30px;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.navigation-tool a {
+    margin-top: 20px;
+}
+
+.navigation-tool a:first-child {
+    margin-top: 0;
+}
+
+#experiences {
+    margin-top: 60px;
+}
+
+#experiences .jobs {
+    display: flex;
+    flex-direction: column;
+}
+
+#experiences .job {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    padding: 20px;
+    margin-left: 15%;
+    border-radius: 20px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px  rgba(68, 68, 68, 0.16);
+    cursor: pointer;
+}
+
+#experiences .job .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+
+#experiences .job h5 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#experiences .job p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#experiences .job h5,
+#experiences .job p {
+    margin: 0px 0px 0px 15px;
+    color: #000000;
+}
+
+#experiences .job .icon {
+    height: 100%;
+}
+
+#experiences .job .icon svg {
+    margin-top: 100%;
+}
+
+#experiences .job[active=true] {
+    background-color: #F55547;
+}
+
+#experiences .job[active=true] h5,
+#experiences .job[active=true] p,
+#experiences .job[active=true] svg {
+    color: #ffffff;
+}
+
+#experiences .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 73px;
+    height: 73px;
+}
+
+#experiences .circle img {
+    width: 60%;
+    height: 30%;
+}
+
+.circle {
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#experiences .job-detail {
+    margin-top: 50px;
+    margin-left: 5%;
+}
+
+#experiences .job-detail .location {
+    display: flex;
+    flex-direction: row;
+}
+
+#experiences .job-detail .location svg {
+    color: #F55547;
+    margin-right: 10px;
+}
+
+#experiences .job-detail h1 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#experiences .job-detail h2 {
+    color: #A2A2A2;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#experiences .job-detail h5 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#experiences .job-detail .site-link {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+#experiences .job-detail .site-link .icon {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+#experiences .job-detail .title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+#experiences .job-detail .description {
+    font-size: 25px;
+    font-weight: 400;
+    color: #A2A2A2;
+    margin-bottom: 30px;
+}
+
+#experiences .job-detail .title p {
+    color: #A2A2A2;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#experiences .job-detail .tecnologies {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+#experiences .job-detail .tecnologies .technology svg {
+    display: flex;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    color: #F55547;
+}
+
+#experiences .job-detail .tecnologies .technology {
+    display: flex;
+    align-items: center;
+    border: 1px solid #F55547;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+#experiences .job-detail .tecnologies .technology:first-child {
+    margin-left: 0;
+}

@@ -1,51 +1,35 @@
 import React from "react"
 import { Link } from 'gatsby';
-import { FaDyalog, FaBlog, FaGamepad, FaUserAstronaut, FaCode } from 'react-icons/fa';
 
-import './styles.css';
+import BorderButton from '../Buttons/BorderButton';
+import LinkButton from '../Buttons/LinkButton';
+import BannerButton from '../Buttons/BannerButton';
 
-export default () => {
-    const menuItems = [
-        {
-          name: 'Blog',
-          slug: '/blog',
-          icon: () => { return(<FaBlog size="30px" />) }
-        },
-        {
-          name: 'Games',
-          slug: '/games',
-          icon: () => { return(<FaGamepad size="30px" />) }
-        },
-        {
-          name: 'Space',
-          slug: '/space',
-          icon: () => { return(<FaUserAstronaut size="30px" />) }
-        },
-        {
-          name: 'Code',
-          slug: '/code',
-          icon: () => { return(<FaCode size="30px" />) }
-        }
-    ];
+import './index.css';
 
+const Header = () => {
     return(
         <nav className="navbar">
-            <ul className="navbar-nav">
-                <li className="nav-logo">
-                    <Link to="/" className="nav-link">
-                        <FaDyalog/>
-                        <span className="link-text">Mr. Daniels</span>
-                    </Link>
-                </li>
-                {menuItems.map(menuItem => (
-                    <li className="nav-item">
-                        <Link to={ menuItem.slug } className="nav-link">
-                            { menuItem.icon() }
-                            <span className="link-text">{ menuItem.name }</span>
-                        </Link>
+            <div className="menu">
+
+                <Link className="logo" to="/">
+                    <img src="/Logo.svg" alt="Dev. Daniel Silva"/>
+                </Link>
+                
+                <ul className="links">
+                    <li>
+                        <LinkButton text="Sobre mim" />
                     </li>
-                ))}
-            </ul>
+                    <li>
+                        <BorderButton text="Contrate-me" />
+                    </li>
+                    <li>
+                        <BannerButton text="Blog" link="/blog" />
+                    </li>
+                </ul>
+            </div>
         </nav>
     );
-};
+}
+
+export default Header;

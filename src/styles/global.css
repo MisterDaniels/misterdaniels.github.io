@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
 
 body {
-    font: 400 14px Roboto, sans-serif;
+    overflow-x: hidden;
+    font: 400 18px Manrope, sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: #f0f0f5;
+    background: #ffffff;
+    margin: 0;
 }
 
 body::-webkit-scrollbar {
@@ -20,4 +28,117 @@ body::-webkit-scrollbar-thumb {
 
 li {
     margin-bottom: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h4,
+h5 {
+    font-size: 20px;
+}
+
+h3,
+h4,
+h5 {
+    color: #A2A2A2;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+h5 {
+    font-weight: 600;
+}
+
+h1,
+h2 {
+    color: #F55547;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+button, div {
+    outline: none;
+    border: none;
+}
+
+a {
+    color: #F55547;
+    text-decoration: none;
+}
+
+button,
+a {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gradient {
+    color: #ffffff;
+    background-image: linear-gradient(to bottom right, #E1776E, #F55547);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #ffffff;
+    color: #F55547;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 3;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -60px;
+
+    font-weight: 500;
+    font-size: 15px;
+    
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 4px 8px 8px  rgba(68, 68, 68, 0.16);
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #F55547 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }

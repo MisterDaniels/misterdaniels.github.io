@@ -1,0 +1,32 @@
+.navigation-tool-static {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    background-color: #ffffff;
+    border: 1px solid #F55547;
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0px 3px 6px #F55547;
+}
+
+.navigation-tool-static svg,
+.navigation-tool-static hr {
+    color: #C4C4C4;
+}
+
+.navigation-tool-static svg {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: color 0.6s;
+}
+
+.navigation-tool-static svg:hover {
+    color: #F55547;
+}
+
+.navigation-tool-static hr {
+    width: 40%;
+    border-bottom: 50px;
+}

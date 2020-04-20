@@ -1,6 +1,10 @@
 ---
+path: "/blog/panda-and-bananas"
 title: "Pandas and Bananas"
+sub-title: "How panda's likes banana!"
 date: "2020-03-19"
+categories: "vida, aleatorio"
+tags: "panda, gatsby"
 ---
 
 Do Pandas eat Bananas? Check out our new video

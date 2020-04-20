@@ -1,6 +1,10 @@
 ---
+path: "/blog/sweet-pandas-eating-sweets"
 title: "Sweet Pandas Eating Sweets"
-date: "2020-02-29"
+sub-title: "How panda's likes banana!"
+date: "2020-03-29"
+categories: "vida, aleatorio"
+tags: "panda, gatsby"
 ---
 
 Pandas are really sweet.

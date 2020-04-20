@@ -6,23 +6,23 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`
+    title: `MisterDaniels - Developer`
   },
   plugins: [
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`
+        name: `posts`,
+        path: `${__dirname}/src/posts`
       }
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-emotion`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        pathToConfigModule: `src/utils/typography`
+        plugins: []
       }
-    },
+    }
   ]
 }
