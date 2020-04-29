@@ -6,9 +6,7 @@ import '../styles/blog-post.css';
 
 export default function Template({data}) {
     const { markdownRemark: post } = data
-
-    console.log(data);
-
+    
     return(
         <div className="blog-post-content">
             <Helmet title={`Dev. MisterDaniels - ${post.frontmatter.title}`} />

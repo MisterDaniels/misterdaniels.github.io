@@ -211,21 +211,6 @@
     margin-bottom: 0;
 }
 
-#experiences .job-detail .site-link {
-    display: flex;
-    flex-direction: row;
-    font-size: 25px;
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 30px;
-}
-
-#experiences .job-detail .site-link .icon {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-}
-
 #experiences .job-detail .title {
     display: flex;
     flex-direction: row;
@@ -251,7 +236,6 @@
     display: flex;
     flex-direction: row;
     margin-top: 10px;
-    margin-bottom: 100px;
 }
 
 #experiences .job-detail .tecnologies .technology svg {

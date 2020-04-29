@@ -8,9 +8,11 @@ import { IoMdArrowDropright } from 'react-icons/io';
 import { MdLocationOn, MdBusinessCenter } from 'react-icons/md';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import GoButton from '../components/Buttons/GoButton';
 import SquareAvatar from '../components/AvatarArea/SquareAvatar';
 import NavigationToolStatic from '../components/Tools/NavigationToolStatic';
+import SeeButton from '../components/Buttons/SeeButton';
 
 import jobsExperiences from '../data/jobs';
 
@@ -43,7 +45,8 @@ export default () => {
                 }
             ]}/>
             <Container maxWidth="lg">
-                <Header/>
+                <Header hasLogo={ true }
+                        hasMenu={ true } />
                 <div id="content">
                     <Grid id="top" container direction="row" justify="center" alignItems="center">
                         <Grid item xs={6} zeroMinWidth>
@@ -184,16 +187,9 @@ export default () => {
                                 { jobsExperiences[jobActive].description }
                             </p>
                             { jobsExperiences[jobActive].site && 
-                                <a 
-                                    href={ jobsExperiences[jobActive].site }
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="site-link">
-                                    Conheça mais
-                                    <span className="icon">
-                                        <FaLongArrowAltRight size={25} color='#000000' />
-                                    </span>
-                                </a>
+                                <SeeButton 
+                                    text="Conheça mais"
+                                    link={ jobsExperiences[jobActive].site } />
                             }
                             <h5>Principais tecnologias utilizadas:</h5>
                             <div className="tecnologies">
@@ -208,6 +204,7 @@ export default () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Footer />
         </div>
     );
 };

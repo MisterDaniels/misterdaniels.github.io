@@ -7,7 +7,7 @@ const LinkButton = (props) => {
     return(
         <Link
             className="link-button"
-            to={ props.link ? props.link : '/' }>
+            to={ props.link ? props.link : '/' } >
             { props.text }
         </Link>
     );

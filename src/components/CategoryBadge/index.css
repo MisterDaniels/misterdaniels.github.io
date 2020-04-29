@@ -1,0 +1,22 @@
+.badge {
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    border: 1px solid #F55547;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.badge svg {
+    margin-right: 10px;
+    color: #F55547;
+}
+
+.badge p {
+    display: flex;
+    align-items: center;
+    color: #F55547;
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
