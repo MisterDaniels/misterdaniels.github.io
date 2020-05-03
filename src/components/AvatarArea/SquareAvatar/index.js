@@ -1,9 +1,28 @@
 import React from 'react';
+import _ from 'lodash';
 import { FaLinkedin, FaFacebookSquare, FaTwitterSquare, FaGithubSquare } from 'react-icons/fa';
 
 import './index.css';
+import userInformation from '../../../data/user';
 
 const SquareAvatar = (props) => {
+
+    var socialLinkedin = _.find(userInformation.social, (information) => {
+        return information.name === 'Linkedin'
+    });
+
+    var socialFacebook = _.find(userInformation.social, (information) => {
+        return information.name === 'Facebook'
+    });
+
+    var socialTwitter = _.find(userInformation.social, (information) => {
+        return information.name === 'Twitter'
+    });
+
+    var socialGithub = _.find(userInformation.social, (information) => {
+        return information.name === 'Github'
+    });
+
     return(
         <div className="square-avatar">
             <div className="avatar">
@@ -14,18 +33,46 @@ const SquareAvatar = (props) => {
                 </div>
             </div>
             <div className="social-icons">
-                <span className="social">
-                    <FaLinkedin size={40} />
-                </span>
-                <span className="social">
-                    <FaFacebookSquare size={40} />
-                </span>
-                <span className="social">
-                    <FaTwitterSquare size={40} />
-                </span>
-                <span className="social">
-                    <FaGithubSquare size={40} />
-                </span>
+                { socialLinkedin &&
+                    <span className="social">
+                        <a
+                            href={ socialLinkedin.url }
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <FaLinkedin size={40} />
+                        </a>
+                    </span>
+                }
+                { socialFacebook &&
+                    <span className="social">
+                        <a
+                            href={ socialFacebook.url }
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <FaFacebookSquare size={40} />
+                        </a>
+                    </span>
+                }
+                { socialTwitter &&
+                        <span className="social">
+                            <a
+                                href={ socialTwitter.url }
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <FaTwitterSquare size={40} />
+                            </a>
+                        </span>
+                }
+                { socialGithub &&
+                    <span className="social">
+                        <a
+                            href={ socialGithub.url }
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <FaGithubSquare size={40} />
+                        </a>
+                    </span>
+                }
             </div>
         </div>
     );

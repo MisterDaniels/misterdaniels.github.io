@@ -63,7 +63,7 @@
     background-color: #333;
 }
 
-.square-avatar .social-icons .social:hover > svg {
+.square-avatar .social-icons .social:hover > a svg {
     color: #ffffff;
 }
 
