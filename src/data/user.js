@@ -1,5 +1,3 @@
-import React from 'react';
-
 const userInformation = {
     name: 'Daniel Silva',
     nickname: 'MisterDaniels',

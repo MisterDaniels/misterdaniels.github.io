@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { FaDraftingCompass, FaCode, FaLaptopCode } from 'react-icons/fa'
 import { Container, Grid } from '@material-ui/core';
 import { AiOutlineVerticalAlignTop } from 'react-icons/ai';
-import { FaUserAstronaut, FaLongArrowAltRight } from 'react-icons/fa';
+import { FaUserAstronaut } from 'react-icons/fa';
 import { IoMdArrowDropright } from 'react-icons/io';
 import { MdLocationOn, MdBusinessCenter } from 'react-icons/md';
 
