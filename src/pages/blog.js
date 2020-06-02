@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { GiMagnifyingGlass } from 'react-icons/gi';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import CategoryBadge from '../components/CategoryBadge';
 import SeeButton from '../components/Buttons/SeeButton';
 
@@ -88,6 +89,7 @@ export default ({ data }) => {
                     </Grid>
                 </div>
             </Container>
+            <Footer />
         </div>
     );
 

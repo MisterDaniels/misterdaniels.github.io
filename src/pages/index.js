@@ -204,6 +204,23 @@ export default () => {
                     </Grid>
                 </Grid>
             </Container>
+            <div id="projects">
+                <Container>
+                    <h1>Alguns projetos</h1>
+                    <div class="menu">
+                        <ul>
+                            <li>Todos</li>
+                            <li>Desenvolvimento</li>
+                            <li>Jogos</li>
+                            <li>Artes</li>
+                            <li>Vídeos</li>
+                        </ul>
+                    </div>
+                </Container>
+            </div>
+            <Container id="posts">
+                <h1>Alguns posts</h1>
+            </Container>
             <Footer />
         </div>
     );

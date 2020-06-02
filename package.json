@@ -3,6 +3,8 @@
 	"version": "0.0.9",
 	"description": "A place where MisterDaniels show your work and talk about everything",
 	"license": "MIT",
+	"homepage": "https://github.com/MisterDaniels/misterdaniels.github.io.git",
+	"private": true,
 	"scripts": {
 		"serve": "gatsby serve",
 		"develop": "env-cmd --file .env.development --fallback gatsby develop",

@@ -221,7 +221,6 @@
     font-size: 25px;
     font-weight: 400;
     color: #A2A2A2;
-    margin-bottom: 30px;
 }
 
 #experiences .job-detail .title p {
@@ -257,4 +256,51 @@
 
 #experiences .job-detail .tecnologies .technology:first-child {
     margin-left: 0;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 140px;
+    padding: 80px 0px;
+    background-color: #202020;
+}
+
+#projects h1 {
+    margin-bottom: 33px;
+    font-weight: 700;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+#projects .menu {
+    margin-bottom: 37px;
+}
+
+#projects .menu li {
+    display: inline;
+    margin-right: 25px;
+    font-weight: 400;
+    font-size: 25px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.menu-active {
+    border-bottom: 2px solid #F55547;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#posts h1 {
+    margin-bottom: 100px;
+    font-weight: 700;
+    font-size: 40px;
+    color: #000000;
 }
