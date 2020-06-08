@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import YouTube  from 'react-youtube';
 import { FaDraftingCompass, FaCode, FaLaptopCode } from 'react-icons/fa'
 import { Container, Grid } from '@material-ui/core';
-import { AiOutlineVerticalAlignTop } from 'react-icons/ai';
-import { FaUserAstronaut } from 'react-icons/fa';
+import { AiOutlineVerticalAlignTop, AiOutlineVerticalAlignBottom} from 'react-icons/ai';
+import { FaUserAstronaut, FaFileCode, FaBloggerB, FaLinkedin } from 'react-icons/fa';
 import { IoMdArrowDropright } from 'react-icons/io';
-import { MdLocationOn, MdBusinessCenter } from 'react-icons/md';
+import { MdLocationOn, MdBusinessCenter, MdEmail } from 'react-icons/md';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -13,14 +14,30 @@ import GoButton from '../components/Buttons/GoButton';
 import SquareAvatar from '../components/AvatarArea/SquareAvatar';
 import NavigationToolStatic from '../components/Tools/NavigationToolStatic';
 import SeeButton from '../components/Buttons/SeeButton';
+import CategoryBadge from '../components/CategoryBadge';
+import Post from '../components/Post';
 
 import jobsExperiences from '../data/jobs';
 
 import '../styles/home.css';
 
-export default () => {    
+export default ({ data }) => {    
     const [jobActive, setjobActive] = useState(0);
     
+    const { edges: posts } = data.allMarkdownRemark;
+
+    const youtubeOptions = {
+        height: '390',
+        width: '640',
+        playerVars: {
+            autoplay: 0,
+            controls: 0,
+            showinfo: 0,
+            rel: 0,
+            loop: 1
+        },
+      };
+
     return(
         <div>
             <div className="design-area">
@@ -42,6 +59,21 @@ export default () => {
                     title: 'Experiências',
                     link: '#experiences',
                     icon: <MdBusinessCenter size={30} />
+                },
+                {
+                    title: 'Projetos',
+                    link: '#projects',
+                    icon: <FaFileCode size={30} />
+                },
+                {
+                    title: 'Posts',
+                    link: '#posts',
+                    icon: <FaBloggerB size={30} />
+                },
+                {
+                    title: 'Contato',
+                    link: '#contact',
+                    icon: <AiOutlineVerticalAlignBottom size={30} />
                 }
             ]}/>
             <Container maxWidth="lg">
@@ -49,7 +81,7 @@ export default () => {
                         hasMenu={ true } />
                 <div id="content">
                     <Grid id="top" container direction="row" justify="center" alignItems="center">
-                        <Grid item xs={6} zeroMinWidth>
+                        <Grid item xs={6} zeroMinWidth className="content">
                             <div className="top-left">
                                 <h4 className="tooltip">
                                     <p className="tooltip-text">That's my nick</p>
@@ -186,11 +218,13 @@ export default () => {
                             <p className="description">
                                 { jobsExperiences[jobActive].description }
                             </p>
-                            { jobsExperiences[jobActive].site && 
-                                <SeeButton 
-                                    text="Conheça mais"
-                                    link={ jobsExperiences[jobActive].site } />
-                            }
+                            <div className="actions">
+                                { jobsExperiences[jobActive].site && 
+                                    <SeeButton 
+                                        text="Conheça mais"
+                                        link={ jobsExperiences[jobActive].site } />
+                                }
+                            </div>
                             <h5>Principais tecnologias utilizadas:</h5>
                             <div className="tecnologies">
                                 { jobsExperiences[jobActive].technology.map((technology, index) => (
@@ -207,7 +241,7 @@ export default () => {
             <div id="projects">
                 <Container>
                     <h1>Alguns projetos</h1>
-                    <div class="menu">
+                    <div className="menu">
                         <ul>
                             <li>Todos</li>
                             <li>Desenvolvimento</li>
@@ -216,12 +250,98 @@ export default () => {
                             <li>Vídeos</li>
                         </ul>
                     </div>
+                    <div className="project-card">
+                        <div className="left">
+                            <YouTube videoId="Bs1ouzYEPk0" opts={youtubeOptions} />
+                        </div>
+                        <div className="right">
+                            <h1>Vídeo cortes espaço</h1>
+                            <p className="description">
+                                Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. 
+                                Manduma pindureta quium dia nois paga. Posuere libero varius. Nullam a nisl ut ante 
+                                blandit hendrerit. Aenean sit amet nisi. Per aumento de cachacis, eu reclamis.
+                                Aenean aliquam molestie leo, vitae iaculis nisl. Todo mundo vê os porris que eu tomo,
+                                mas ninguém vê os tombis que eu levo! In elementis mé pra quem é amistosis quis leo. 
+                                Interagi no mé, cursus quis, vehicula ac nisi.
+                            </p>
+                            <div className="actions">
+                                <SeeButton 
+                                        text="Conheça mais"
+                                        link={ jobsExperiences[jobActive].site } />
+                            </div>
+                            <h2>Principais tecnologias utilizadas:</h2>
+                            <div className="tecnologies">
+                                <CategoryBadge category={ { 'title': 'After Effects' } } />
+                                <CategoryBadge category={ { 'title': 'Adobe Photoshop' } } />
+                                <CategoryBadge category={ { 'title': 'Sony Vegas' } } />
+                                <CategoryBadge category={ { 'title': 'Sound Forge' } } />
+                                <CategoryBadge category={ { 'title': 'Artlist.io' } } />
+                            </div>
+                        </div>
+                    </div>
                 </Container>
             </div>
             <Container id="posts">
                 <h1>Alguns posts</h1>
+                <div className="posts">
+                    { posts
+                        .filter(post => post.node.frontmatter.title.length > 0)
+                        .map(({ node: post }) => {
+                            return(
+                                <Post post={ post } />
+                            );
+                        })
+                    }
+                </div>
             </Container>
+            <div id="contact" className="description-card gradient">
+                <Container>
+                    <Grid container direction="row" class="content">
+                        <Grid item xs={5} zeroMinWidth class="left">
+                            <h1>Contatos</h1>
+                            <div class="contact-info">
+                                <MdEmail size={27} />
+                                <h3>dodosilva51@gmail.com</h3>
+                            </div>
+                            <div class="contact-info">
+                                <FaLinkedin size={27} />
+                                <h3>/misterdans</h3>
+                            </div>
+                        </Grid>
+                        <Grid item xs={7} zeroMinWidth class="right">
+                            <div class="form">
+                                <h2>Quer entrar em contato comigo ?</h2>
+                                <p>Deixe sua mensagem aqui, prometo que respondo.</p>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </div>
             <Footer />
         </div>
     );
 };
+
+export const pageQuery = graphql`
+    query IndexQuery {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 3) {
+            edges {
+                node {
+                    excerpt(pruneLength: 250)
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "DD MMMM, YYYY")
+                        path
+                      	sub_title
+                      	categories
+                      	tags
+                      	image
+                      	imageAuthor
+                      	imageAuthorLink
+                    }
+                }
+            }
+        }
+    }
+`

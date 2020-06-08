@@ -2,8 +2,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 1022px;
-    height: 899px;
+    width: 50%;
+    height: 85%;
     z-index: -1;
 }
 
@@ -23,13 +23,14 @@
 #top .experience-area {
     margin-top: 8%;
     display: flex;
-    flex-direction: line;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .experience-area .role-item .detail {
     display: flex;
-    flex-direction: line;
+    flex-direction: row;
 }
 
 .experience-area .role-item .title {
@@ -41,7 +42,7 @@
 }
 
 .experience-area .role-item .detail .time-desc {
-    font-size: 20px;
+    font-size: 2.0rem;
     font-weight: 400;
     color: #A2A2A2;
 }
@@ -60,13 +61,13 @@
 .description-card .text-content h1 {
     margin-bottom: 4%;
     color: #ffffff;
-    font-size: 50px;
+    font-size: 5.0rem;
     font-weight: 700;
 }
 
 .description-card .text-content p {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 400;
 }
 
@@ -126,12 +127,12 @@
 }
 
 #experiences .job h5 {
-    font-size: 26px;
+    font-size: 2.6rem;
     font-weight: 700;
 }
 
 #experiences .job p {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -194,21 +195,26 @@
 
 #experiences .job-detail h1 {
     color: #000000;
-    font-size: 40px;
+    font-size: 4.0rem;
     font-weight: 700;
 }
 
 #experiences .job-detail h2 {
     color: #A2A2A2;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 #experiences .job-detail h5 {
     color: #000000;
-    font-size: 20px;
+    font-size: 2.0rem;
     font-weight: 700;
     margin-bottom: 0;
+}
+
+#experiences .job-detail .actions {
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 #experiences .job-detail .title {
@@ -218,7 +224,7 @@
 }
 
 #experiences .job-detail .description {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 400;
     color: #A2A2A2;
 }
@@ -226,14 +232,15 @@
 #experiences .job-detail .title p {
     color: #A2A2A2;
     font-weight: 600;
-    font-size: 14px;
-    margin-left: 10px;
+    font-size: 1.4rem;
+    margin-right: 10px;
     margin-top: 20px;
 }
 
 #experiences .job-detail .tecnologies {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
@@ -251,11 +258,8 @@
     border: 1px solid #F55547;
     border-radius: 50%;
     padding: 10px;
-    margin-left: 15px;
-}
-
-#experiences .job-detail .tecnologies .technology:first-child {
-    margin-left: 0;
+    margin-right: 15px;
+    margin-top: 10px;
 }
 
 #projects {
@@ -270,7 +274,7 @@
 #projects h1 {
     margin-bottom: 33px;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 4.0rem;
     color: #ffffff;
 }
 
@@ -282,7 +286,7 @@
     display: inline;
     margin-right: 25px;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #ffffff;
     cursor: pointer;
 }
@@ -301,6 +305,182 @@
 #posts h1 {
     margin-bottom: 100px;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 4.0rem;
     color: #000000;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    padding: 54px 70px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.project-card h1 {
+    margin-bottom: 17px !important;
+    color: #000000 !important;
+}
+
+.project-card h2 {
+    margin-top: 30px;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.project-card .description {
+    margin-bottom: 10px;
+    word-break: break-word;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #A2A2A2;
+}
+
+.project-card .left {
+    width: 60%;
+    margin-right: 30px;
+}
+
+.project-card .left iframe {
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px  rgba(68, 68, 68, 0.16);
+}
+
+.project-card .right {
+    width: 40%;
+}
+
+.project-card .right .actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project-card .right .actions a {
+    transform: scale(0.8);
+    transform-origin: left;
+}
+
+.project-card .right .tecnologies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-card .right span {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#contact .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contact .content .left {
+    margin-left: 60px;
+}
+
+#contact .content .left h1 {
+    font-weight: 700;
+    font-size: 4.0rem;
+    color: #ffffff;
+    margin-bottom: 55px;
+}
+
+#contact .content .left .contact-info h3 {
+    font-weight: 400;
+    font-size: 2.0rem;
+    color: #ffffff;
+    margin-left: 15px;
+}
+
+#contact .content .left .contact-info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+#contact .content .right .form {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    margin-right: 85px;
+    margin-bottom: 64px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px  rgba(68, 68, 68, 0.16);
+}
+
+#contact .content .right .form h2 {
+    font-weight: 700;
+    font-size: 3.0rem;
+    color: #F55547;
+    margin-bottom: 15px;
+}
+
+#contact .content .right .form p {
+    font-weight: 400;
+    font-size: 2.0rem;
+    color: #A2A2A2;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 1277px) {
+
+    #top .content {
+        max-width: 100%;
+        flex-basis: 100%;   
+    }
+
+    .top-design {
+        display: none;
+    }
+
+    .links li:first-child a {
+        color: #000000;
+    }
+
+    .experience-area {
+        justify-content: space-evenly !important;
+    }
+
+    .project-card {
+        flex-direction: column !important;
+    }
+
+    .project-card .left {
+        align-self: center;
+        margin-bottom: 30px;
+        margin-right: 0px;
+        width: fit-content;
+    }
+
+    .project-card .right {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1560px) {
+
+    .navigation-tool-static {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 862px) {
+
+    .experience-area {
+        justify-content: space-between !important;
+    }
+
+    .experience-area .role-item {
+        margin-bottom: 20px;
+    }
+
 }

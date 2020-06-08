@@ -13,19 +13,19 @@ import {
 const blogCategories = [
     {
         title: 'Games',
-        icon: <IoLogoGameControllerA size={33} />
+        icon: <IoLogoGameControllerA size={12} />
     },
     {
         title: 'Desenvolvimento',
-        icon: <FaCode size={33} />
+        icon: <FaCode size={12} />
     },
     {
         title: 'Vídeo',
-        icon: <FaVideo size={33} />
+        icon: <FaVideo size={12} />
     },
     {
         title: 'Designer',
-        icon: <IoLogoDesignernews size={33} />
+        icon: <IoLogoDesignernews size={12} />
     },
 ];
 

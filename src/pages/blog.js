@@ -7,7 +7,7 @@ import { GiMagnifyingGlass } from 'react-icons/gi';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CategoryBadge from '../components/CategoryBadge';
-import SeeButton from '../components/Buttons/SeeButton';
+import Post from '../components/Post';
 
 import categories from '../data/categories';
 
@@ -40,47 +40,7 @@ export default ({ data }) => {
                                     .filter(post => post.node.frontmatter.title.length > 0)
                                     .map(({ node: post }) => {
                                         return(
-                                            <div className="post" key={ post.id } >
-                                                <div className="image">
-                                                    <img src={ post.frontmatter.image }></img>
-                                                    { post.frontmatter.imageAuthor &&
-                                                        <a 
-                                                            className="point"
-                                                            href={ post.frontmatter.imageAuthorLink }
-                                                            target="_blank"
-                                                            rel="noopener noreferrer" >
-                                                            <span className="tooltip">
-                                                                <p className="tooltip-text">
-                                                                    { post.frontmatter.imageAuthor }
-                                                                </p>
-                                                            </span>
-                                                        </a>
-                                                    }
-                                                </div>
-                                                <div className="details">
-                                                    <div className="categories">
-                                                        <CategoryBadge category={ categories[0] } />
-                                                        <CategoryBadge category={ categories[1] } />
-                                                    </div>
-                                                    <div className="texts">
-                                                        <h1>
-                                                            { post.frontmatter.title }
-                                                        </h1>
-                                                        <h2>
-                                                            { post.frontmatter.date }
-                                                        </h2>
-                                                        <p> { post.excerpt } </p>
-                                                        <div className="actions">
-                                                            <h3>
-                                                            NOVO 
-                                                            </h3>
-                                                            <SeeButton 
-                                                                text="Ver post"
-                                                                link={ post.frontmatter.path } />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <Post post={ post } />
                                         );
                                     })
                                 }
@@ -96,7 +56,7 @@ export default ({ data }) => {
 }
 
 export const pageQuery = graphql`
-    query IndexQuery {
+    query BlogQuery {
         allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
             edges {
                 node {
@@ -106,6 +66,12 @@ export const pageQuery = graphql`
                         title
                         date(formatString: "DD MMMM, YYYY")
                         path
+                      	sub_title
+                      	categories
+                      	tags
+                      	image
+                      	imageAuthor
+                      	imageAuthorLink
                     }
                 }
             }
