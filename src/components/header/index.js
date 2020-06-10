@@ -19,17 +19,19 @@ const Header = (props) => {
                 }
 
                 { props.hasMenu &&
-                    <ul className="links">
-                        <li>
-                            <LinkButton text="Sobre mim" />
-                        </li>
-                        <li>
-                            <BorderButton text="Contrate-me" />
-                        </li>
-                        <li>
+                    <div>
+                        <ul className="links">
+                            <li>
+                                <LinkButton text="Sobre mim" />
+                            </li>
+                            <li>
+                                <BorderButton text="Contrate-me" />
+                            </li>
+                        </ul>
+                        <span className="blog-item">
                             <BannerButton text="Blog" link="/blog" />
-                        </li>
-                    </ul>
+                        </span>
+                    </div>
                 }
             </div>
         </nav>

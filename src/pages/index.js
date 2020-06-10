@@ -16,6 +16,7 @@ import NavigationToolStatic from '../components/Tools/NavigationToolStatic';
 import SeeButton from '../components/Buttons/SeeButton';
 import CategoryBadge from '../components/CategoryBadge';
 import Post from '../components/Post';
+import ContactForm from '../components/ContactForm';
 
 import jobsExperiences from '../data/jobs';
 
@@ -130,7 +131,7 @@ export default ({ data }) => {
             </Container>
             <div id="bio" className="description-card gradient">
                 <Container>
-                    <Grid container direction="row">
+                    <Grid container direction="row" className="container">
                         <Grid item xs={8} zeroMinWidth>
                             <section className="text-content">
                                 <h1>Quem sou eu, afinal ?</h1>
@@ -312,6 +313,7 @@ export default ({ data }) => {
                             <div class="form">
                                 <h2>Quer entrar em contato comigo ?</h2>
                                 <p>Deixe sua mensagem aqui, prometo que respondo.</p>
+                                <ContactForm />
                             </div>
                         </Grid>
                     </Grid>

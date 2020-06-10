@@ -109,6 +109,7 @@
 #experiences .job {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 85%;
     padding: 20px;
     margin-left: 15%;
@@ -378,6 +379,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: -150px;
 }
 
 #contact .content .left {
@@ -402,6 +404,10 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
+}
+
+#contact .content .right {
+    transform: translateY(-120px);
 }
 
 #contact .content .right .form {
@@ -429,6 +435,14 @@
     margin-bottom: 30px;
 }
 
+@media only screen and (max-width: 1560px) {
+
+    .navigation-tool-static {
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width: 1277px) {
 
     #top .content {
@@ -445,7 +459,7 @@
     }
 
     .experience-area {
-        justify-content: space-evenly !important;
+        justify-content: space-between !important;
     }
 
     .project-card {
@@ -463,24 +477,95 @@
         width: 100%;
     }
 
+    #content {
+        margin-top: 0px;
+    }
+
 }
 
-@media only screen and (max-width: 1560px) {
+@media only screen and (max-width: 1200px) {
 
-    .navigation-tool-static {
+    #experiences .circle {
         display: none;
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    #contact .content {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    #contact .content .right {
+        transform: none !important;
+    }
+
+    #contact .content .right .form {
+        margin-right: 0;
+    }
+
+    #bio .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bio .container .MuiGrid-grid-xs-4,
+    #bio .container .MuiGrid-grid-xs-8 {
+        max-width: 100%;
+    }
+
+    #bio .image-content {
+        margin-top: 50px;
+        margin-left: 0px;
     }
 
 }
 
 @media only screen and (max-width: 862px) {
 
-    .experience-area {
-        justify-content: space-between !important;
-    }
-
     .experience-area .role-item {
         margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 726px) {
+
+    iframe {
+        width: 480px;
+        height: 320px;
+    }
+
+}
+
+@media only screen and (max-width: 630px) {
+
+    nav .logo {
+        width: 40%;
+    }
+
+    nav .links {
+        transform: scale(0.8);
+        transform-origin: right;
+    }
+
+}
+
+@media only screen and (max-width: 548px) {
+
+    iframe {
+        width: 380px !important;
+        height: 220px !important;
+    }
+
+}
+
+@media only screen and (max-width: 457px) {
+
+    nav .logo {
+        width: 50%;
     }
 
 }
