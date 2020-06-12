@@ -1,0 +1,13 @@
+.site-link {
+    display: flex;
+    flex-direction: row;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.site-link .icon {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}

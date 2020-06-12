@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    /* A cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+    font: 400 18px Manrope, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #ffffff;
+    margin: 0;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+    background: #f55547;
+}
+
+li {
+    margin-bottom: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h4,
+h5 {
+    font-size: 2.0rem;
+}
+
+h3,
+h4,
+h5 {
+    color: #A2A2A2;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+h5 {
+    font-weight: 600;
+}
+
+h1,
+h2 {
+    color: #F55547;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 8.0rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 4.2rem;
+    font-weight: 800;
+}
+
+button, div {
+    outline: none;
+    border: none;
+}
+
+a {
+    color: #F55547;
+    text-decoration: none;
+}
+
+button,
+a {
+    font-size: 2.0rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gradient {
+    color: #ffffff;
+    background-image: linear-gradient(to bottom right, #E1776E, #F55547);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #ffffff;
+    color: #F55547;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 3;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -60px;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 4px 8px 8px  rgba(68, 68, 68, 0.16);
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #F55547 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1277px) {
+
+    html {
+        font-size: 50.2%;
+    }
+
+}

@@ -1,0 +1,52 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 29px 30px;
+    border: solid #A2A2A2 1px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #A2A2A2;
+}
+
+form textarea {
+    resize: none;
+}
+
+form span {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #F55547;
+}
+
+form .input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+
+form button {
+    padding: 22px 70px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    background-image: linear-gradient(to bottom right, #E1776E, #F55547);
+}
+
+form button:disabled {
+    background-image: linear-gradient(to bottom right, #A2A2A2, #ffffff);
+    pointer-events: none;
+    cursor: none;
+}
+
+.error input,
+.error textarea {
+    border-color: #F55547;
+}

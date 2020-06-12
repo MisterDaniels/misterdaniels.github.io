@@ -1,0 +1,14 @@
+.fixed {
+    position: fixed;
+}
+
+.banner-button {
+    height: 40px;
+    width: 94px;
+    background-color: #F55547;
+    color: #ffffff;
+}
+
+.banner-button input[type=button] {
+    margin-bottom: 10px;
+}
