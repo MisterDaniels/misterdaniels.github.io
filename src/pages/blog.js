@@ -14,7 +14,7 @@ import categories from '../data/categories';
 import '../styles/blog.css';
 
 export default ({ data }) => {
-    const { edges: posts } = data.allMarkdownRemark;
+    const { edges: posts } = data.allMdx;
 
     return(
         <div>
@@ -57,7 +57,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
     query BlogQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+        allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
             edges {
                 node {
                     excerpt(pruneLength: 250)
@@ -67,7 +67,7 @@ export const pageQuery = graphql`
                         date(formatString: "DD MMMM, YYYY")
                         path
                       	sub_title
-                      	categories
+                      	category
                       	tags
                       	image
                       	imageAuthor

@@ -59,6 +59,8 @@
     font-weight: 400;
     font-size: 1.4rem;
     color: #000000;
+    height: 90px;
+    max-height: 90px;
 }
 
 .post .details .texts h3 {
@@ -71,5 +73,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
     margin-top: 20px;
 }

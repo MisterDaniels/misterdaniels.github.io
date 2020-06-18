@@ -22,9 +22,6 @@ const Header = (props) => {
                     <div>
                         <ul className="links">
                             <li>
-                                <LinkButton text="Sobre mim" />
-                            </li>
-                            <li>
                                 <BorderButton text="Contrate-me" />
                             </li>
                         </ul>

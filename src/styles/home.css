@@ -299,12 +299,12 @@
 #posts {
     display: flex;
     flex-direction: column;
-    text-align: center;
     margin-top: 80px;
 }
 
-#posts h1 {
+#posts > h1 {
     margin-bottom: 100px;
+    align-self: center;
     font-weight: 700;
     font-size: 4.0rem;
     color: #000000;

@@ -6,23 +6,44 @@
 
 module.exports = {
   siteMetadata: {
-    title: `MisterDaniels - Developer`
+    siteUrl: 'https://misterdaniels.github.io',
+    title: 'MisterDaniels - Developer'
   },
   plugins: [
-    `gatsby-plugin-emotion`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `posts`,
+        name: 'posts',
         path: `${__dirname}/src/posts`
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: []
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-responsive-iframe'
+          }
+        ]
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://misterdaniels.github.io',
+        sitemap: 'https://misterdaniels.github.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-disqus',
+      options: {
+        shortname: 'misterdaniels'
+      }
+    },
+    'gatsby-plugin-feed-mdx'
   ]
 }

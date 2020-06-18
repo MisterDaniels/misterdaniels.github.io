@@ -25,7 +25,7 @@ import '../styles/home.css';
 export default ({ data }) => {    
     const [jobActive, setjobActive] = useState(0);
     
-    const { edges: posts } = data.allMarkdownRemark;
+    const { edges: posts } = data.allMdx;
 
     const youtubeOptions = {
         height: '390',
@@ -251,32 +251,34 @@ export default ({ data }) => {
                             <li>Vídeos</li>
                         </ul>
                     </div>
-                    <div className="project-card">
-                        <div className="left">
-                            <YouTube videoId="Bs1ouzYEPk0" opts={youtubeOptions} />
-                        </div>
-                        <div className="right">
-                            <h1>Vídeo cortes espaço</h1>
-                            <p className="description">
-                                Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. 
-                                Manduma pindureta quium dia nois paga. Posuere libero varius. Nullam a nisl ut ante 
-                                blandit hendrerit. Aenean sit amet nisi. Per aumento de cachacis, eu reclamis.
-                                Aenean aliquam molestie leo, vitae iaculis nisl. Todo mundo vê os porris que eu tomo,
-                                mas ninguém vê os tombis que eu levo! In elementis mé pra quem é amistosis quis leo. 
-                                Interagi no mé, cursus quis, vehicula ac nisi.
-                            </p>
-                            <div className="actions">
-                                <SeeButton 
+                    <div className="projects">
+                        <div className="project-card">
+                            <div className="left">
+                                <YouTube videoId="Bs1ouzYEPk0" opts={youtubeOptions} />
+                            </div>
+                            <div className="right">
+                                <h1>Vídeo cortes espaço</h1>
+                                <p className="description">
+                                    Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. 
+                                    Manduma pindureta quium dia nois paga. Posuere libero varius. Nullam a nisl ut ante 
+                                    blandit hendrerit. Aenean sit amet nisi. Per aumento de cachacis, eu reclamis.
+                                    Aenean aliquam molestie leo, vitae iaculis nisl. Todo mundo vê os porris que eu tomo,
+                                    mas ninguém vê os tombis que eu levo! In elementis mé pra quem é amistosis quis leo. 
+                                    Interagi no mé, cursus quis, vehicula ac nisi.
+                                </p>
+                                <div className="actions">
+                                    <SeeButton 
                                         text="Conheça mais"
                                         link={ jobsExperiences[jobActive].site } />
-                            </div>
-                            <h2>Principais tecnologias utilizadas:</h2>
-                            <div className="tecnologies">
-                                <CategoryBadge category={ { 'title': 'After Effects' } } />
-                                <CategoryBadge category={ { 'title': 'Adobe Photoshop' } } />
-                                <CategoryBadge category={ { 'title': 'Sony Vegas' } } />
-                                <CategoryBadge category={ { 'title': 'Sound Forge' } } />
-                                <CategoryBadge category={ { 'title': 'Artlist.io' } } />
+                                </div>
+                                <h2>Principais tecnologias utilizadas:</h2>
+                                <div className="tecnologies">
+                                    <CategoryBadge category={ { 'title': 'After Effects' } } />
+                                    <CategoryBadge category={ { 'title': 'Adobe Photoshop' } } />
+                                    <CategoryBadge category={ { 'title': 'Sony Vegas' } } />
+                                    <CategoryBadge category={ { 'title': 'Sound Forge' } } />
+                                    <CategoryBadge category={ { 'title': 'Artlist.io' } } />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -326,7 +328,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
     query IndexQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 3) {
+        allMdx(sort: { order: DESC, fields: [frontmatter___date] }, limit: 3) {
             edges {
                 node {
                     excerpt(pruneLength: 250)
@@ -336,7 +338,7 @@ export const pageQuery = graphql`
                         date(formatString: "DD MMMM, YYYY")
                         path
                       	sub_title
-                      	categories
+                      	category
                       	tags
                       	image
                       	imageAuthor
