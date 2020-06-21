@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://misterdaniels.github.io/sitemap.xml
+Host: https://misterdaniels.github.io
