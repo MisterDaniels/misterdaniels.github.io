@@ -46,6 +46,7 @@ p {
 
 .blog-post .head .sub-title a {
     font-size: inherit;
+    margin-left: 5px;
 }
 
 .blog-post .head .sub-title h2,

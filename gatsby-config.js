@@ -1,8 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+const emoji = require('remark-emoji');
 
 module.exports = {
   siteMetadata: {
@@ -23,6 +19,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],
+        remarkPlugins: [emoji],
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-responsive-iframe'
@@ -44,6 +41,56 @@ module.exports = {
         shortname: 'misterdaniels'
       }
     },
-    'gatsby-plugin-feed-mdx'
+    {
+      resolve: 'gatsby-plugin-feed-mdx',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + "/blog" + edge.node.frontmatter.path,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMdx(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      frontmatter {
+                        title
+                        date
+                        path
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "DEV MisterDaniels - RSS",
+            match: "^/blog/"
+          },
+        ],
+      },
+    }
   ]
 }

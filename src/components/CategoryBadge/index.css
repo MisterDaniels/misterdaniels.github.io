@@ -9,6 +9,7 @@
 }
 
 .badge svg {
+    align-self: center;
     margin-right: 10px;
     color: #F55547;
 }

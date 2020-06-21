@@ -61,6 +61,7 @@
     color: #000000;
     height: 90px;
     max-height: 90px;
+    overflow: hidden;
 }
 
 .post .details .texts h3 {

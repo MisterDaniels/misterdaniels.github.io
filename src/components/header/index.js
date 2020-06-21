@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from 'gatsby';
+import { FiArrowLeft } from 'react-icons/fi';
 
 import BorderButton from '../Buttons/BorderButton';
-import LinkButton from '../Buttons/LinkButton';
 import BannerButton from '../Buttons/BannerButton';
 
 import './index.css';
@@ -10,6 +10,19 @@ import './index.css';
 const Header = (props) => {
     return(
         <nav className="navbar">
+            { typeof window !== `undefined` && window.location.href.match(/((\/)+(blog)(\/)?)$/) &&
+                <span className="banner"></span>
+            }
+
+            { typeof window !== `undefined` && window.location.href.match(/((\/)+(blog)(\/))(.)+$/) &&
+                <Link to="/blog">
+                    <span className="back">
+                        <FiArrowLeft size={20} color={'#F55547'} />
+                        <p>Voltar</p>
+                    </span>
+                </Link>
+            }
+
             <div className="menu">
 
                 { props.hasLogo &&
@@ -22,11 +35,11 @@ const Header = (props) => {
                     <div>
                         <ul className="links">
                             <li>
-                                <BorderButton text="Contrate-me" />
+                                <BorderButton text="Contrate-me" link="#contact" />
                             </li>
                         </ul>
                         <span className="blog-item">
-                            <BannerButton text="Blog" link="/blog" />
+                        <BannerButton text="Blog" link="/blog" />
                         </span>
                     </div>
                 }

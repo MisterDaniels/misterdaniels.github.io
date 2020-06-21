@@ -34,7 +34,14 @@ export default function Template({data}) {
                             <h1 className="title">{ post.frontmatter.title }</h1>
                             <div className="sub-title">
                                 <h2 className="border-separate">{ post.frontmatter.category }</h2>
-                                <h3>{ post.frontmatter.date } por <a>{ post.frontmatter.author }</a></h3>
+                                <h3>{ post.frontmatter.date } por 
+                                    <a 
+                                        href={ post.frontmatter.authorUrl } 
+                                        target="_blank" 
+                                        rel="noopener noreferrer">
+                                        { post.frontmatter.author }
+                                    </a>
+                                </h3>
                             </div>
                         </div>
                         <div className="body">
@@ -64,6 +71,7 @@ export const blogQuery = graphql`
                 title
                 category
                 author
+                authorUrl
             }
         }
     }

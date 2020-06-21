@@ -10,7 +10,7 @@ export default (props) => {
     return(
         <div className="post" key={ props.post.id } >
             <div className="image">
-                <img src={ props.post.frontmatter.image }></img>
+                <img src={ props.post.frontmatter.image } alt="Imagem Post"></img>
                 { props.post.frontmatter.imageAuthor &&
                 <a 
                     className="point"

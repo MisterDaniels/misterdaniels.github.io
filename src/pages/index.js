@@ -7,6 +7,7 @@ import { AiOutlineVerticalAlignTop, AiOutlineVerticalAlignBottom} from 'react-ic
 import { FaUserAstronaut, FaFileCode, FaBloggerB, FaLinkedin } from 'react-icons/fa';
 import { IoMdArrowDropright } from 'react-icons/io';
 import { MdLocationOn, MdBusinessCenter, MdEmail } from 'react-icons/md';
+import { ToastContainer } from 'react-toastify';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -21,6 +22,8 @@ import ContactForm from '../components/ContactForm';
 import jobsExperiences from '../data/jobs';
 
 import '../styles/home.css';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 export default ({ data }) => {    
     const [jobActive, setjobActive] = useState(0);
@@ -37,10 +40,11 @@ export default ({ data }) => {
             rel: 0,
             loop: 1
         },
-      };
+    };
 
     return(
         <div>
+            <ToastContainer />
             <div className="design-area">
                 <img className="top-design" alt="Design Back" src="/design-back.png"></img>
                 <img className="top-design front" alt="Design Front" src="/design-front.png"></img>

@@ -1,12 +1,11 @@
 import React from 'react';
 import { Container, Grid } from '@material-ui/core';
-import { Link, graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
-import { GiMagnifyingGlass } from 'react-icons/gi';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CategoryBadge from '../components/CategoryBadge';
+import SerchInput from '../components/SearchInput';
+import SearchDate from '../components/SearchDate';
 import Post from '../components/Post';
 
 import categories from '../data/categories';
@@ -26,13 +25,13 @@ export default ({ data }) => {
                         <CategoryBadge category={ categories[0] } />
                     </div>
                     <div className="date">
-
+                        <SearchDate />
                     </div>
                     <div className="word">
-
+                        <SerchInput />
                     </div>
                 </div>
-                <div id="content">
+                <div id="post">
                     <Grid container direction="row" justify="center" alignItems="center">
                         <Grid item xs={12} zeroMinWidth>
                             <div className="posts">
