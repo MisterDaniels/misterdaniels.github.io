@@ -303,20 +303,20 @@ export default ({ data }) => {
             </Container>
             <div id="contact" className="description-card gradient">
                 <Container>
-                    <Grid container direction="row" class="content">
+                    <Grid container direction="row" className="content">
                         <div className="left">
                             <h1>Contatos</h1>
-                            <div class="contact-info">
+                            <div className="contact-info">
                                 <MdEmail size={27} />
                                 <h3>dodosilva51@gmail.com</h3>
                             </div>
-                            <div class="contact-info">
+                            <div className="contact-info">
                                 <FaLinkedin size={27} />
                                 <h3>/misterdans</h3>
                             </div>
                         </div>
                         <div className="right">
-                            <div class="form">
+                            <div className="form">
                                 <h2>Quer entrar em contato comigo ?</h2>
                                 <p>Deixe sua mensagem aqui, prometo que respondo.</p>
                                 <ContactForm />
