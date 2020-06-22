@@ -99,6 +99,21 @@ module.exports = {
         defer: false,
         args: `?onload=onloadCallback&render=explicit`,
       }
-   }
+   },
+   {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-170083487-1",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        pageTransitionDelay: 0,
+        optimizeId: "OPT-PR78SXD",
+        defer: false,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10
+      }
+    }
   ]
 }
