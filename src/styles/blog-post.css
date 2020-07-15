@@ -29,6 +29,20 @@ p {
     margin-bottom: 60px;
 }
 
+.head span {
+    cursor: pointer;
+}
+
+.head span svg {
+    margin-right: 5px;
+}
+
+.head span span {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #000000;
+}
+
 .blog-post .head {
     display: flex;
     flex-direction: column;
@@ -61,7 +75,7 @@ p {
     margin-top: 20px;
 }
 
-.comments {
+#comments {
     margin-top: 100px;
 }
 

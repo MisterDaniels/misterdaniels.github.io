@@ -6,8 +6,8 @@
 	"homepage": "https://github.com/MisterDaniels/misterdaniels.github.io.git",
 	"private": true,
 	"scripts": {
-		"serve": "gatsby serve",
-		"develop": "env-cmd --file .env.development --fallback gatsby develop",
+		"start": "gatsby serve",
+		"start:dev": "env-cmd --file .env.development --fallback gatsby develop",
 		"build": "gatsby build",
 		"clean": "gatsby clean",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",

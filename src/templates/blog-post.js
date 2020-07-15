@@ -1,11 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
+import { navigate } from '@reach/router';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Container } from '@material-ui/core';
-import { Disqus } from 'gatsby-plugin-disqus';
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 import Gist from 'react-gist';
+import { MdModeComment } from 'react-icons/md';
 
 import Header from '../components/Header';
 
@@ -34,14 +36,26 @@ export default function Template({data}) {
                             <h1 className="title">{ post.frontmatter.title }</h1>
                             <div className="sub-title">
                                 <h2 className="border-separate">{ post.frontmatter.category }</h2>
-                                <h3>{ post.frontmatter.date } por 
+                                <h2>{ new Date(post.frontmatter.date).toLocaleDateString([], { 
+                                    year: 'numeric', 
+                                    month: 'long', 
+                                    day: 'numeric' 
+                                    }) } por 
                                     <a 
                                         href={ post.frontmatter.authorUrl } 
                                         target="_blank" 
                                         rel="noopener noreferrer">
                                         { post.frontmatter.author }
                                     </a>
-                                </h3>
+                                </h2>
+                                <span onClick={ e => {
+                                    e.preventDefault();
+
+                                    navigate('#comments');
+                                } }>
+                                    <MdModeComment size={14} color={'#000000'} />
+                                    <CommentCount config={ disqusConfig } placeholder={'...'} />
+                                </span>
                             </div>
                         </div>
                         <div className="body">
@@ -52,7 +66,7 @@ export default function Template({data}) {
                         </div>
                     </div>
                 </div>
-                <div className="comments">
+                <div id="comments">
                     <Disqus config={ disqusConfig } />
                 </div>
             </Container>
@@ -66,7 +80,7 @@ export const blogQuery = graphql`
             body
             frontmatter {
                 id
-                date(formatString: "DD MMMM, YYYY")
+                date
                 path
                 title
                 category
