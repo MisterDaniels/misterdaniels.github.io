@@ -64,19 +64,19 @@ export default function Template({data}) {
                             <div className="tools">
                                 <p>Compartilhe:</p>
                                 <a
-                                    href={ `https://facebook.com/sharer/sharer.php?u=${window.location.host}/blog${post.frontmatter.path}` } 
+                                    href={ `https://facebook.com/sharer/sharer.php?u=http://misterdaniels.github.io/blog${post.frontmatter.path}` } 
                                     target="_blank" 
                                     rel="noopener noreferrer">
                                     <FaFacebookSquare size={26} color={'#000000'} />
                                 </a>
                                 <a
-                                    href={ `https://twitter.com/home?status=${window.location.host}/blog${post.frontmatter.path}` } 
+                                    href={ `https://twitter.com/home?status=http://misterdaniels.github.io/blog${post.frontmatter.path}` } 
                                     target="_blank" 
                                     rel="noopener noreferrer">
                                     <FaTwitterSquare size={26} color={'#000000'} />
                                 </a>
                                 <a
-                                    href={ `https://linkedin.com/shareArticle?mini=true&url=${window.location.host}/blog${post.frontmatter.path}` } 
+                                    href={ `https://linkedin.com/shareArticle?mini=true&url=http://misterdaniels.github.io/blog${post.frontmatter.path}` } 
                                     target="_blank" 
                                     rel="noopener noreferrer">
                                     <FaLinkedin size={26} color={'#000000'} />
