@@ -8,6 +8,8 @@ import { Container } from '@material-ui/core';
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 import Gist from 'react-gist';
 import { MdModeComment } from 'react-icons/md';
+import { FaFacebookSquare, FaTwitterSquare, FaLinkedin, FaClock } from 'react-icons/fa';
+import readingTime from 'reading-time';
 
 import Header from '../components/Header';
 
@@ -23,6 +25,8 @@ export default function Template({data}) {
         identifier: post.frontmatter.id,
         title: post.frontmatter.title
     };
+
+    var time = readingTime(post.body);
 
     return(
         <div>
@@ -55,6 +59,31 @@ export default function Template({data}) {
                                 } }>
                                     <MdModeComment size={14} color={'#000000'} />
                                     <CommentCount config={ disqusConfig } placeholder={'...'} />
+                                </span>
+                            </div>
+                            <div className="tools">
+                                <p>Compartilhe:</p>
+                                <a
+                                    href={ `https://facebook.com/sharer/sharer.php?u=${window.location.host}/blog${post.frontmatter.path}` } 
+                                    target="_blank" 
+                                    rel="noopener noreferrer">
+                                    <FaFacebookSquare size={26} color={'#000000'} />
+                                </a>
+                                <a
+                                    href={ `https://twitter.com/home?status=${window.location.host}/blog${post.frontmatter.path}` } 
+                                    target="_blank" 
+                                    rel="noopener noreferrer">
+                                    <FaTwitterSquare size={26} color={'#000000'} />
+                                </a>
+                                <a
+                                    href={ `https://linkedin.com/shareArticle?mini=true&url=${window.location.host}/blog${post.frontmatter.path}` } 
+                                    target="_blank" 
+                                    rel="noopener noreferrer">
+                                    <FaLinkedin size={26} color={'#000000'} />
+                                </a>
+                                <span className="time">
+                                    <FaClock size={16} color={'#ffffff'} />
+                                    <p>{ time.minutes } min</p>
                                 </span>
                             </div>
                         </div>

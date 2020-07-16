@@ -37,7 +37,31 @@ p {
     margin-right: 5px;
 }
 
-.head span span {
+.head .tools {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+}
+
+.head .tools *:not(:only-child) {
+    margin-right: 10px;
+}
+
+.head .tools .time {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 8px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: #F55547;
+}
+
+.head .tools .time p {
+    color: #ffffff;
+}
+
+.head .sub-title span span,
+.head .tools p {
     font-weight: 400;
     font-size: 1.6rem;
     color: #000000;
@@ -55,7 +79,7 @@ p {
 
 .blog-post .head .sub-title h2 {
     margin-right: 5px;
-    padding: 0 5px;
+    padding-right: 5px;
 }
 
 .blog-post .head .sub-title a {
