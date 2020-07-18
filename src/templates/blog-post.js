@@ -1,15 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { navigate } from '@reach/router';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Container } from '@material-ui/core';
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 import Gist from 'react-gist';
-import { MdModeComment } from 'react-icons/md';
+import { MdModeComment, MdKeyboardArrowLeft } from 'react-icons/md';
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin, FaClock } from 'react-icons/fa';
 import readingTime from 'reading-time';
+import YouTube  from 'react-youtube';
+
+import Heading from '../components/Blog';
+import Text from '../components/Blog';
 
 import Header from '../components/Header';
 
@@ -17,8 +21,16 @@ import '../styles/blog-post.css';
 
 export default function Template({data}) {
     const { mdx: post } = data;
-    
-    const shortcodes = { Gist };
+    const { edges: suggestions } = data.allMdx;
+
+    const shortcodes = { 
+        Gist, 
+        h1: Heading.H1,
+        h2: Heading.H2,
+        h3: Heading.H3,
+        h4: Heading.H4,
+        p: Text.P
+    };
 
     const disqusConfig = {
         url: `http://misterdaniels.github.io${post.frontmatter.path}`,
@@ -28,12 +40,14 @@ export default function Template({data}) {
 
     var time = readingTime(post.body);
 
+    var tags = post.frontmatter.tags.split(',');
+
     return(
         <div>
             <Container maxWidth="lg">
                 <Header hasLogo={ true }
                         hasMenu={ false } />
-                <div className="content">
+                <div id="content">
                     <Helmet title={`DEV MisterDaniels - ${post.frontmatter.title}`} />
                     <div className="blog-post">
                         <div className="head">
@@ -95,6 +109,37 @@ export default function Template({data}) {
                         </div>
                     </div>
                 </div>
+                <div id="navigation">
+                    <div className="tags">
+                        { tags.length > 0 &&
+                            <p>Tags:</p>
+                        }
+                        { tags.map((tag, index) => (
+                            <span className="badge" key={ index } >
+                                <p>{ tag }</p>
+                            </span>
+                        )) }
+                    </div>
+                    <div className="suggestion">
+                        <div>
+                            <MdKeyboardArrowLeft />
+                            <div>
+                                <h1>Recomendo esse</h1>
+                                <Link to={ suggestions[0].node.frontmatter.path } >
+                                    <p>{ suggestions[0].node.frontmatter.title }</p>
+                                </Link>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h1>Ou que tal esse</h1>
+                                <Link to={ suggestions[1].node.frontmatter.path } >
+                                    <p>{ suggestions[1].node.frontmatter.title }</p>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="comments">
                     <Disqus config={ disqusConfig } />
                 </div>
@@ -115,7 +160,22 @@ export const blogQuery = graphql`
                 category
                 author
                 authorUrl
+                tags
             }
+        },
+        allMdx(
+            sort: { order: DESC, fields: [frontmatter___date] } 
+            limit: 2 
+            filter: { frontmatter: { path: { ne: $path } } } 
+            ) {
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            path
+                        }
+                    }
+                }
         }
     }
 `

@@ -6,12 +6,6 @@ a {
     font-weight: 700;
 }
 
-p {
-    line-height: 1.75;
-    font-weight: 400;
-    font-size: 1.6rem;
-}
-
 .blog-post .head h1 {
     font-weight: 700;
     font-size: 4.98rem;
@@ -21,7 +15,7 @@ p {
     color: #F55547;
 }
 
-.content {
+#content {
     margin-top: 120px;
 }
 
@@ -37,13 +31,18 @@ p {
     margin-right: 5px;
 }
 
-.head .tools {
+.head .tools,
+#navigation .tags {
     display: flex;
     flex-direction: row;
+}
+
+.head .tools {
     margin-top: 35px;
 }
 
-.head .tools *:not(:only-child) {
+.head .tools *:not(:only-child),
+#navigation .tags *:not(:only-child) {
     margin-right: 10px;
 }
 
@@ -60,8 +59,7 @@ p {
     color: #ffffff;
 }
 
-.head .sub-title span span,
-.head .tools p {
+p {
     font-weight: 400;
     font-size: 1.6rem;
     color: #000000;
@@ -99,11 +97,38 @@ p {
     margin-top: 20px;
 }
 
-#comments {
-    margin-top: 100px;
-}
-
 .border-separate {
     border: solid #F55547;
     border-width: 0 2px 0 0;
+}
+
+#navigation {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#navigation .suggestion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+#navigation .suggestion h1,
+#navigation .suggestion p {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+#navigation .suggestion h1 {
+    color: #F55547;
+    margin-bottom: 10px;
+}
+
+#navigation .suggestion p {
+    color: #000000;
+}
+
+#navigation .suggestion div:last-child h1 {
+    text-align: end;
 }

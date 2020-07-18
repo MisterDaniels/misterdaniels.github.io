@@ -60,14 +60,11 @@ export const pageQuery = graphql`
             edges {
                 node {
                     excerpt(pruneLength: 250)
-                    id
                     frontmatter {
                         title
                         date(formatString: "DD MMMM, YYYY")
                         path
-                      	sub_title
                       	category
-                      	tags
                       	image
                       	imageAuthor
                       	imageAuthorLink
