@@ -7,7 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Container } from '@material-ui/core';
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 import Gist from 'react-gist';
-import { MdModeComment, MdKeyboardArrowLeft } from 'react-icons/md';
+import { MdModeComment, MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin, FaClock } from 'react-icons/fa';
 import readingTime from 'reading-time';
 import YouTube  from 'react-youtube';
@@ -121,23 +121,24 @@ export default function Template({data}) {
                         )) }
                     </div>
                     <div className="suggestion">
-                        <div>
-                            <MdKeyboardArrowLeft />
-                            <div>
-                                <h1>Recomendo esse</h1>
-                                <Link to={ suggestions[0].node.frontmatter.path } >
-                                    <p>{ suggestions[0].node.frontmatter.title }</p>
-                                </Link>
+                        <Link to={ suggestions[0].node.frontmatter.path } >
+                            <div className="before">
+                                <MdKeyboardArrowLeft size={60} color={'#F55547'} />
+                                <div>
+                                    <h1>Recomendo esse</h1>
+                                        <p>{ suggestions[0].node.frontmatter.title }</p>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h1>Ou que tal esse</h1>
-                                <Link to={ suggestions[1].node.frontmatter.path } >
+                        </Link>
+                        <Link to={ suggestions[1].node.frontmatter.path } >
+                            <div className="next">
+                                <div>
+                                    <h1>Ou que tal esse</h1>
                                     <p>{ suggestions[1].node.frontmatter.title }</p>
-                                </Link>
+                                </div>
+                                <MdKeyboardArrowRight size={60} color={'#F55547'} />
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <div id="comments">

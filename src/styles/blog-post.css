@@ -129,6 +129,12 @@ p {
     color: #000000;
 }
 
-#navigation .suggestion div:last-child h1 {
+#navigation .suggestion .before,
+#navigation .suggestion .next {
+    display: flex;
+    flex-direction: row;
+}
+
+#navigation .suggestion a:last-child div h1 {
     text-align: end;
 }
