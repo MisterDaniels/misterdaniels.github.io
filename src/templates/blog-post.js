@@ -14,6 +14,7 @@ import YouTube  from 'react-youtube';
 
 import Heading from '../components/Blog';
 import Text from '../components/Blog';
+import Media from '../components/Blog';
 
 import Header from '../components/Header';
 
@@ -29,7 +30,8 @@ export default function Template({data}) {
         h2: Heading.H2,
         h3: Heading.H3,
         h4: Heading.H4,
-        p: Text.P
+        p: Text.P,
+        iframe: Media.Iframe
     };
 
     const disqusConfig = {
@@ -96,8 +98,8 @@ export default function Template({data}) {
                                     <FaLinkedin size={26} color={'#000000'} />
                                 </a>
                                 <span className="time">
-                                    <FaClock size={16} color={'#ffffff'} />
-                                    <p>{ time.minutes } min</p>
+                                    <FaClock size={14} color={'#ffffff'} />
+                                    <p>{ Math.ceil(time.minutes) } min</p>
                                 </span>
                             </div>
                         </div>

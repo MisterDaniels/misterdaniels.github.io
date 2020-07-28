@@ -2,10 +2,10 @@ import React from 'react';
 
 import './index.css';
 
-const H2 = (props) => {
+const Img = (props) => {
     return(
-        <h2 {...props} />
+        <img {...props} />
     );
 }
 
-export default H2;
+export default Img;

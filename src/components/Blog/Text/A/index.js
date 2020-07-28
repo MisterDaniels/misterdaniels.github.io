@@ -2,10 +2,10 @@ import React from 'react';
 
 import './index.css';
 
-const H2 = (props) => {
+const A = (props) => {
     return(
-        <h2 {...props} />
+        <a {...props} />
     );
 }
 
-export default H2;
+export default A;

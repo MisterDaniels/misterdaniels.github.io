@@ -1,10 +1,11 @@
-import React from 'react';
 import P from './P';
+import A from './A';
 
 import './index.css';
 
 const Text = {
-    P
+    P,
+    A
 }
 
 export default Text;

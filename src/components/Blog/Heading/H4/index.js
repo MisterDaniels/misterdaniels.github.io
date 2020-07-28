@@ -2,11 +2,9 @@ import React from 'react';
 
 import './index.css';
 
-const H4 = ({children}) => {
+const H4 = (props) => {
     return(
-        <h4 className="blog">
-            { children }
-        </h4>
+        <h4 {...props} />
     );
 }
 

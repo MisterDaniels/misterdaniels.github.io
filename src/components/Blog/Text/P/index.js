@@ -2,11 +2,9 @@ import React from 'react';
 
 import './index.css';
 
-const P = ({children}) => {
+const P = (props) => {
     return(
-        <p className="blog">
-            { children }
-        </p>
+        <p {...props} />
     );
 }
 

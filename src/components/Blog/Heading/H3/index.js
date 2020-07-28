@@ -2,11 +2,9 @@ import React from 'react';
 
 import './index.css';
 
-const H3 = ({children}) => {
+const H3 = (props) => {
     return(
-        <h3 className="blog">
-            { children }
-        </h3>
+        <h3 {...props} />
     );
 }
 
