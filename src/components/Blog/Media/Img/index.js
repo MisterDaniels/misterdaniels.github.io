@@ -4,7 +4,10 @@ import './index.css';
 
 const Img = (props) => {
     return(
-        <img {...props} />
+        <div className="image">
+            <img {...props} />
+            <small>Qualquer coisa</small>
+        </div>
     );
 }
 

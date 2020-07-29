@@ -1,6 +1,15 @@
-.blog-post .body img {
-    border: 1px solid #707070;
-    border-radius: 20px;
-    width: 80%;
-    margin-left: 10%;
+.blog-post .body .iframe,
+.blog-post .body .image {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog-post .body .iframe small,
+.blog-post .body .image small {
+    align-self: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #A2A2A2;
 }

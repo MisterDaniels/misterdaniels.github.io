@@ -31,7 +31,8 @@ export default function Template({data}) {
         h3: Heading.H3,
         h4: Heading.H4,
         p: Text.P,
-        iframe: Media.Iframe
+        iframe: Media.Iframe,
+        img: Media.Img
     };
 
     const disqusConfig = {

@@ -4,7 +4,10 @@ import './index.css';
 
 const Iframe = (props) => {
     return(
-        <iframe {...props} width="600" height="400" frameborder="0" allowfullscreen class="video" />
+        <div className="iframe">
+            <iframe {...props} width="600" height="400" frameborder="0" allowfullscreen class="video" />
+            <small>Qualquer coisa</small>
+        </div>
     );
 }
 
