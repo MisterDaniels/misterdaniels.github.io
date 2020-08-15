@@ -279,6 +279,14 @@
     color: #ffffff;
 }
 
+#projects svg {
+    cursor: pointer;
+}
+
+#projects svg[active='false'] {
+    display: none;
+}
+
 #projects .menu {
     margin-bottom: 37px;
 }
@@ -290,6 +298,10 @@
     font-size: 2.5rem;
     color: #ffffff;
     cursor: pointer;
+}
+
+#projects .menu li[active='true'] {
+    border-bottom: 2px solid #F55547;
 }
 
 .menu-active {
@@ -316,6 +328,7 @@
     padding: 54px 70px;
     border-radius: 50px;
     background-color: #ffffff;
+    margin-bottom: 50px;
     text-align: left;
 }
 

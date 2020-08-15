@@ -23,6 +23,9 @@ module.exports = {
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-responsive-iframe'
+          },
+          {
+            resolve: 'gatsby-remark-embed-spotify'
           }
         ]
       },

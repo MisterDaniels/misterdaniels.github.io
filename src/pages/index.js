@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link, graphql } from 'gatsby';
-import YouTube  from 'react-youtube';
 import { FaDraftingCompass, FaCode, FaLaptopCode } from 'react-icons/fa'
 import { Container, Grid } from '@material-ui/core';
 import { AiOutlineVerticalAlignTop, AiOutlineVerticalAlignBottom} from 'react-icons/ai';
 import { FaUserAstronaut, FaFileCode, FaBloggerB, FaLinkedin } from 'react-icons/fa';
-import { IoMdArrowDropright } from 'react-icons/io';
+import { IoMdArrowDropright, IoIosArrowDown } from 'react-icons/io';
 import { MdLocationOn, MdBusinessCenter, MdEmail } from 'react-icons/md';
 import { ToastContainer } from 'react-toastify';
 
@@ -20,28 +19,19 @@ import Post from '../components/Post';
 import ContactForm from '../components/ContactForm';
 
 import jobsExperiences from '../data/jobs';
+import projectsList from '../data/projectsList';
 
 import '../styles/home.css';
 
 import 'react-toastify/dist/ReactToastify.css';
 
 export default ({ data }) => {    
-    const [jobActive, setjobActive] = useState(0);
+    const [jobActive, setJobActive] = useState(0);
+    const [projectsToShow, setProjectsToShow] = useState(2);
+    const [projectCategorySelected, setProjectCategorySelected] = useState('Todos');
     
     const { edges: posts } = data.allMdx;
-
-    const youtubeOptions = {
-        height: '390',
-        width: '640',
-        playerVars: {
-            autoplay: 0,
-            controls: 0,
-            showinfo: 0,
-            rel: 0,
-            loop: 1
-        },
-    };
-
+    
     return(
         <div>
             <ToastContainer />
@@ -175,7 +165,7 @@ export default ({ data }) => {
                                     className="job" 
                                     key={ index } 
                                     active={ jobActive === index ? 'true' : 'false' }
-                                    onClick={ () => { setjobActive(index)  } }
+                                    onClick={ () => { setJobActive(index)  } }
                                     onKeyDown={ () => {} }
                                     role="button"
                                     tabIndex={ index }>
@@ -248,43 +238,65 @@ export default ({ data }) => {
                     <h1>Alguns projetos</h1>
                     <div className="menu">
                         <ul>
-                            <li>Todos</li>
-                            <li>Desenvolvimento</li>
-                            <li>Jogos</li>
-                            <li>Artes</li>
-                            <li>Vídeos</li>
+                            <li
+                                active={ projectCategorySelected === 'Todos' ? 'true' : 'false' }
+                                onClick={ () => { 
+                                    setProjectCategorySelected('Todos');
+                                    setProjectsToShow(2); 
+                                } }>
+                                Todos
+                            </li>
+                            { projectsList.categories.map((category) => (
+                                <li 
+                                    key={ category }
+                                    active={ projectCategorySelected === category ? 'true' : 'false' }
+                                    onClick={ () => { 
+                                        setProjectCategorySelected(category);
+                                        setProjectsToShow(2);
+                                    } }>
+                                    { category }
+                                </li>
+                            )) }
                         </ul>
                     </div>
                     <div className="projects">
-                        <div className="project-card">
-                            <div className="left">
-                                <YouTube videoId="Bs1ouzYEPk0" opts={youtubeOptions} />
-                            </div>
-                            <div className="right">
-                                <h1>Vídeo cortes espaço</h1>
-                                <p className="description">
-                                    Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. 
-                                    Manduma pindureta quium dia nois paga. Posuere libero varius. Nullam a nisl ut ante 
-                                    blandit hendrerit. Aenean sit amet nisi. Per aumento de cachacis, eu reclamis.
-                                    Aenean aliquam molestie leo, vitae iaculis nisl. Todo mundo vê os porris que eu tomo,
-                                    mas ninguém vê os tombis que eu levo! In elementis mé pra quem é amistosis quis leo. 
-                                    Interagi no mé, cursus quis, vehicula ac nisi.
-                                </p>
-                                <div className="actions">
-                                    <SeeButton 
-                                        text="Conheça mais"
-                                        link={ jobsExperiences[jobActive].site } />
+                        { projectsList.projects
+                            .filter(project => projectCategorySelected !== 'Todos' ? 
+                                project.categories.includes(projectCategorySelected) : project.title)
+                            .slice(0, projectsToShow)
+                            .map((project, index) => (
+                            <div
+                                key={ index }
+                                className='project-card' >
+                                <div className="left">
+                                    { project.media }
                                 </div>
-                                <h2>Principais tecnologias utilizadas:</h2>
-                                <div className="tecnologies">
-                                    <CategoryBadge category={ { 'title': 'After Effects' } } />
-                                    <CategoryBadge category={ { 'title': 'Adobe Photoshop' } } />
-                                    <CategoryBadge category={ { 'title': 'Sony Vegas' } } />
-                                    <CategoryBadge category={ { 'title': 'Sound Forge' } } />
-                                    <CategoryBadge category={ { 'title': 'Artlist.io' } } />
+                                <div className="right">
+                                    <h1>{ project.title }</h1>
+                                    <p className="description">
+                                        { project.description }
+                                    </p>
+                                    <div className="actions">
+                                        <SeeButton 
+                                            text="Conheça mais"
+                                            link={ project.link } />
+                                    </div>
+                                    <h2>Principais tecnologias utilizadas:</h2>
+                                    <div className="tecnologies">
+                                        { project.tecnologies.map((tecnology, index) => (
+                                            <CategoryBadge key={ index } category={ { 'title': tecnology.title } } />
+                                        )) }
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        ))}
+                        <IoIosArrowDown 
+                            size={50} 
+                            color="#FFFFFF"
+                            onClick={ () => setProjectsToShow(projectsToShow + 1) }
+                            active={ projectsToShow !== projectsList.projects
+                                .filter(project => projectCategorySelected !== 'Todos' ? 
+                                    project.categories.includes(projectCategorySelected) : project.title).length ? 'true' : 'false' } />
                     </div>
                 </Container>
             </div>
