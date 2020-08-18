@@ -6,6 +6,16 @@
     box-sizing: inherit;
 }
 
+::-moz-selection { 
+    color: #ffffff;
+    background: #f55547; 
+}
+
+::selection { 
+    color: #ffffff;
+    background: #f55547; 
+}
+
 html {
     /* A cada 1rem será considerado 10px */
     font-size: 62.5%;

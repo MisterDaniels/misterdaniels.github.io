@@ -26,12 +26,13 @@ import {
 
 import SimpleIcon from 'simple-icons-react-component';
 
-const jobsExperience = [
+const jobsExperiences = [
     {
         location: {
             city: 'Videira',
             state: 'SC',
-            link: '@-27.004182,-51.1500183,21z'
+            link: '@-27.004182,-51.1500183,21z',
+            hasHomeOffice: true
         },
         title: 'Auryn Soluções Web to Print',
         company: 'Auryn',
@@ -229,4 +230,18 @@ const jobsExperience = [
     }
 ];
 
-export default jobsExperience;
+const areasExperiences = {
+    designer: {
+        startTime: new Date('2017-01-02')
+    },
+    programmer: {
+        startTime: new Date('2019-10-05')
+    }
+};
+
+const jobs = {
+    jobsExperiences,
+    areasExperiences
+};
+
+export default jobs;

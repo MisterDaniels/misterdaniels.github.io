@@ -35,7 +35,7 @@ const Header = (props) => {
                     <div>
                         <ul className="links">
                             <li>
-                                <BorderButton text="Contrate-me" link="#contact" />
+                                <BorderButton text="Contate-me" link="#contact" />
                             </li>
                         </ul>
                         <span className="blog-item">

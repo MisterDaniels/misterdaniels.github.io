@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Link, graphql } from 'gatsby';
 import { FaDraftingCompass, FaCode, FaLaptopCode } from 'react-icons/fa'
 import { Container, Grid } from '@material-ui/core';
-import { AiOutlineVerticalAlignTop, AiOutlineVerticalAlignBottom} from 'react-icons/ai';
+import { AiOutlineVerticalAlignTop, AiOutlineVerticalAlignBottom, AiFillHome } from 'react-icons/ai';
 import { FaUserAstronaut, FaFileCode, FaBloggerB, FaLinkedin } from 'react-icons/fa';
 import { IoMdArrowDropright, IoIosArrowDown } from 'react-icons/io';
 import { MdLocationOn, MdBusinessCenter, MdEmail } from 'react-icons/md';
 import { ToastContainer } from 'react-toastify';
+import moment from 'moment';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -18,8 +19,9 @@ import CategoryBadge from '../components/CategoryBadge';
 import Post from '../components/Post';
 import ContactForm from '../components/ContactForm';
 
-import jobsExperiences from '../data/jobs';
+import jobs from '../data/jobs';
 import projectsList from '../data/projectsList';
+import userInformation from '../data/user';
 
 import '../styles/home.css';
 
@@ -30,6 +32,8 @@ export default ({ data }) => {
     const [projectsToShow, setProjectsToShow] = useState(2);
     const [projectCategorySelected, setProjectCategorySelected] = useState('Todos');
     
+    const avatarRandomJoke = userInformation.avatarJokes[Math.floor(Math.random() * userInformation.avatarJokes.length)];
+
     const { edges: posts } = data.allMdx;
     
     return(
@@ -79,7 +83,7 @@ export default ({ data }) => {
                         <Grid item xs={6} zeroMinWidth className="content">
                             <div className="top-left">
                                 <h4 className="tooltip">
-                                    <p className="tooltip-text">That's my nick</p>
+                                    <p className="tooltip-text">É um nick!</p>
                                     MisterDaniels
                                 </h4>
                                 <h1>Daniel Silva</h1>
@@ -91,7 +95,9 @@ export default ({ data }) => {
                                         <h2 className="title">Designer</h2>
                                         <div className="detail">
                                             <FaDraftingCompass size={50} color="#F55547" />
-                                            <h3 className="time">3+</h3>
+                                            <h3 className="time">
+                                                { moment().diff(jobs.areasExperiences.designer.startTime, 'years') }+
+                                            </h3>
                                             <p className="time-desc">anos</p>
                                         </div>
                                     </div>
@@ -99,7 +105,9 @@ export default ({ data }) => {
                                         <h2 className="title">Programador</h2>
                                         <div className="detail">
                                             <FaCode size={50} color="#F55547" />
-                                            <h3 className="time">8</h3>
+                                            <h3 className="time">
+                                                { moment().diff(jobs.areasExperiences.programmer.startTime, 'months') }
+                                            </h3>
                                             <p className="time-desc">meses</p>
                                         </div>
                                     </div>
@@ -130,12 +138,7 @@ export default ({ data }) => {
                             <section className="text-content">
                                 <h1>Quem sou eu, afinal ?</h1>
                                 <p>
-                                    Desde criança sempre fui apaixonado em conhecer, portanto, tive a 
-                                    experiência em desenvolver trabalhos e consequentemente me tornei 
-                                    mais maduro e sério desde cedo. Atualmente, trabalho no setor de 
-                                    Marketing da Rádio Simpatia FM 105,5 de Campos Novos / SC. 
-                                    Tive a oportunidade deste pouco tempo, em desenvolver vídeos 
-                                    voltados á apresentar algum produto ou instituição.
+                                    { userInformation.bio() }
                                 </p>
                             </section>
                         </Grid>
@@ -145,11 +148,11 @@ export default ({ data }) => {
                                     img="/avatar.png"
                                     emoji={
                                         {
-                                            name: 'man-facepalming',
-                                            text: '🤦‍♂️'
+                                            name: avatarRandomJoke.emoji.name,
+                                            text: avatarRandomJoke.emoji.text
                                         }
                                     }
-                                    status="ÉÉÉ... Só tenho essa foto" />
+                                    status={ avatarRandomJoke.message } />
                             </div>
                         </Grid>
                     </Grid>
@@ -160,7 +163,7 @@ export default ({ data }) => {
                 <Grid container direction="row">
                     <Grid item xs={4} zeroMinWidth>
                         <div className="jobs">
-                            { jobsExperiences.map((job, index) => (
+                            { jobs.jobsExperiences.map((job, index) => (
                                 <div 
                                     className="job" 
                                     key={ index } 
@@ -190,39 +193,50 @@ export default ({ data }) => {
                     </Grid>
                     <Grid item xs={8} zeroMinWidth>
                         <div className="job-detail">
-                            <span className="location">
-                                <MdLocationOn size={25}/>
-                                <a 
-                                    href={ jobsExperiences[jobActive].location.link
-                                         ? 'https://google.com/maps/' + jobsExperiences[jobActive].location.link 
-                                         : '/' }
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    <p>{ jobsExperiences[jobActive].location.city }-
-                                    { jobsExperiences[jobActive].location.state }</p>
-                                </a>
-                            </span>
+                            <div className="localizations">
+                                <span className="location">
+                                    <MdLocationOn size={25}/>
+                                    <a 
+                                        href={ jobs.jobsExperiences[jobActive].location.link
+                                            ? 'https://google.com/maps/' + jobs.jobsExperiences[jobActive].location.link 
+                                            : '#' }
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <p>{ jobs.jobsExperiences[jobActive].location.city }-
+                                        { jobs.jobsExperiences[jobActive].location.state }</p>
+                                    </a>
+                                </span>
+                                { jobs.jobsExperiences[jobActive].location.hasHomeOffice && 
+                                    <span className="location">
+                                        <AiFillHome size={25}/>
+                                        <p>Tem experiência com Home Office</p>
+                                    </span>
+                                }
+                            </div>
                             <div className="title">
-                                <h1>{ jobsExperiences[jobActive].title }</h1>
+                                <h1>{ jobs.jobsExperiences[jobActive].title }</h1>
                                 <p>
-                                    { jobsExperiences[jobActive].start.toLocaleString('default', { month: 'short' }) } 
-                                     de { jobsExperiences[jobActive].start.getFullYear() } 
+                                    { jobs.jobsExperiences[jobActive].start.toLocaleString('default', { month: 'short' }) } 
+                                    de { jobs.jobsExperiences[jobActive].start.getFullYear() } 
+                                    - { jobs.jobsExperiences[jobActive].end === null ? 'o momento' :
+                                     jobs.jobsExperiences[jobActive].end.toLocaleString('default', { month: 'short' }) +
+                                     'de ' + jobs.jobsExperiences[jobActive].end.getFullYear() } 
                                 </p>
                             </div>
-                            <h2 style={{marginBottom: '30px'}}>{ jobsExperiences[jobActive].role }</h2>
+                            <h2 style={{marginBottom: '30px'}}>{ jobs.jobsExperiences[jobActive].role }</h2>
                             <p className="description">
-                                { jobsExperiences[jobActive].description }
+                                { jobs.jobsExperiences[jobActive].description }
                             </p>
                             <div className="actions">
-                                { jobsExperiences[jobActive].site && 
+                                { jobs.jobsExperiences[jobActive].site && 
                                     <SeeButton 
                                         text="Conheça mais"
-                                        link={ jobsExperiences[jobActive].site } />
+                                        link={ jobs.jobsExperiences[jobActive].site } />
                                 }
                             </div>
                             <h5>Principais tecnologias utilizadas:</h5>
                             <div className="tecnologies">
-                                { jobsExperiences[jobActive].technology.map((technology, index) => (
+                                { jobs.jobsExperiences[jobActive].technology.map((technology, index) => (
                                     <div className="technology tooltip" key={ index }>
                                         { technology.icon }
                                         <p className="tooltip-text">{ technology.title }</p>
