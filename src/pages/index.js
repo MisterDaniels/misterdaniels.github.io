@@ -8,6 +8,7 @@ import { IoMdArrowDropright, IoIosArrowDown } from 'react-icons/io';
 import { MdLocationOn, MdBusinessCenter, MdEmail } from 'react-icons/md';
 import { ToastContainer } from 'react-toastify';
 import moment from 'moment';
+import { motion } from 'framer-motion';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -35,13 +36,28 @@ export default ({ data }) => {
     const avatarRandomJoke = userInformation.avatarJokes[Math.floor(Math.random() * userInformation.avatarJokes.length)];
 
     const { edges: posts } = data.allMdx;
-    
+
     return(
         <div>
             <ToastContainer />
             <div className="design-area">
-                <img className="top-design" alt="Design Back" src="/design-back.png"></img>
-                <img className="top-design front" alt="Design Front" src="/design-front.png"></img>
+                <motion.img 
+                    className="top-design" 
+                    alt="Design Back" 
+                    src="/design-back.png"
+                    animate={{
+                        rotate: [0.5, -0.5, 0.5, -0.5, 0.5],
+                        scale: [1.02, 1.01, 1.02, 1.01, 1.02]
+                    }}
+                    transition={{
+                        loop: Infinity,
+                        ease: 'linear',
+                        duration: 10
+                    }} />
+                <img 
+                    className="top-design front" 
+                    alt="Design Front" 
+                    src="/design-front.png" />
             </div>
             <NavigationToolStatic menus={[
                 {
@@ -78,7 +94,11 @@ export default ({ data }) => {
             <Container maxWidth="lg">
                 <Header hasLogo={ true }
                         hasMenu={ true } />
-                <div id="content">
+                <motion.div 
+                    id="content"
+                    initial={{ opacity: 0, y: '100%' }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }} >
                     <Grid id="top" container direction="row" justify="center" alignItems="center">
                         <Grid item xs={6} zeroMinWidth className="content">
                             <div className="top-left">
@@ -86,7 +106,10 @@ export default ({ data }) => {
                                     <p className="tooltip-text">É um nick!</p>
                                     MisterDaniels
                                 </h4>
-                                <h1>Daniel Silva</h1>
+                                <motion.h1
+                                    transition={{ duration: 0.5 }}>
+                                    Daniel Silva
+                                </motion.h1>
                                 <h5>Desenvolvedor web, UI/UX Designer, Vídeo Editor, Game
                                     developer nas horas vagas e ♥ por código.</h5>
                                 <GoButton text="SAIBA MAIS" link="#bio" />
@@ -129,7 +152,7 @@ export default ({ data }) => {
                             </div>
                         </Grid>
                     </Grid>
-                </div>
+                </motion.div>
             </Container>
             <div id="bio" className="description-card gradient">
                 <Container>
