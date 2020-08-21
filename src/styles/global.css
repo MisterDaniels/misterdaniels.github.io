@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
+body {
+    --background: #ffffff;
+    --textNeutralNormal: #A2A2A2;
+    --textNeutralSpecial: #000000;
+    --textSpecialNormal: #ffffff;
+    --mainColor: #f55547;
+}
+
+body.dark {
+    --background: #1e1e24;
+    --textNeutralNormal: #f1f1f1;
+    --textNeutralSpecial: #ffffff
+}
+
 *, *:before, *:after {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
@@ -8,12 +22,12 @@
 
 ::-moz-selection { 
     color: #ffffff;
-    background: #f55547; 
+    background: var(--mainColor); 
 }
 
 ::selection { 
     color: #ffffff;
-    background: #f55547; 
+    background: var(--mainColor); 
 }
 
 html {
@@ -25,7 +39,7 @@ body {
     overflow-x: hidden;
     font: 400 18px Manrope, sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: #ffffff;
+    background: var(--background);
     margin: 0;
 }
 
@@ -41,7 +55,7 @@ textarea::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb,
 textarea::-webkit-scrollbar-thumb {
-    background: #f55547;
+    background: var(--mainColor);
 }
 
 li {
@@ -65,7 +79,7 @@ h5 {
 h3,
 h4,
 h5 {
-    color: #A2A2A2;
+    color: var(--textNeutralNormal);
 }
 
 h4 {
@@ -78,7 +92,7 @@ h5 {
 
 h1,
 h2 {
-    color: #F55547;
+    color: var(--mainColor);
     font-weight: 700;
 }
 
@@ -101,7 +115,7 @@ button, div {
 }
 
 a {
-    color: #F55547;
+    color: var(--mainColor);
     text-decoration: none;
 }
 
@@ -114,7 +128,7 @@ a {
 
 .gradient {
     color: #ffffff;
-    background-image: linear-gradient(to bottom right, #E1776E, #F55547);
+    background-image: linear-gradient(to bottom right, #E1776E, var(--mainColor));
 }
 
 .tooltip {
@@ -126,7 +140,7 @@ a {
     visibility: hidden;
     width: 120px;
     background-color: #ffffff;
-    color: #F55547;
+    color: var(--mainColor);
     text-align: center;
     padding: 5px;
     border-radius: 6px;
@@ -153,7 +167,7 @@ a {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #F55547 transparent transparent transparent;
+    border-color: var(--mainColor) transparent transparent transparent;
 }
 
 .tooltip:hover .tooltip-text {

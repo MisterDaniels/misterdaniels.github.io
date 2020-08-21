@@ -15,6 +15,29 @@ import '../styles/blog.css';
 export default ({ data }) => {
     const { edges: posts } = data.allMdx;
 
+    const searchInputQuery = graphql`
+        query($searchQuery: String) {
+            allMdx(filter: {
+                body: {
+                    regex: $searchQuery
+                }
+            }) {
+                nodes {
+                    excerpt(pruneLength: 250)
+                    frontmatter {
+                        title
+                        date(formatString: "DD MMMM, YYYY")
+                        path
+                      	category
+                      	image
+                      	imageAuthor
+                      	imageAuthorLink
+                    }
+                }
+            }
+        }
+    `;
+
     return(
         <div>
             <Container maxWidth="lg">
