@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from 'gatsby';
 import { FiArrowLeft } from 'react-icons/fi';
+import { FaMoon, FaRegMoon } from 'react-icons/fa';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 import BorderButton from '../Buttons/BorderButton';
@@ -9,6 +10,7 @@ import BannerButton from '../Buttons/BannerButton';
 import './index.css';
 
 const Header = (props) => {
+    const [themeIcon, setThemeIcon] = useState(<FaRegMoon size={20} />);
 
     function getInitialColorMode() {
         const persistedColorPreference = window.localStorage.getItem('color-mode');
@@ -26,6 +28,24 @@ const Header = (props) => {
         }
 
         return 'light';
+    }
+
+    function changeTheme(theme, themeChanger) {
+        switch (theme) {
+            case 'light': 
+                setThemeIcon(<FaMoon size={20} />);
+                theme = 'dark';
+                break;
+            case 'dark':
+                setThemeIcon(<FaRegMoon size={20} />);
+                theme = 'light';
+                break;
+            default:
+                setThemeIcon(<FaRegMoon size={20} />);
+                theme = 'light';
+        }
+
+        themeChanger(theme);
     }
     
     return(
@@ -52,7 +72,7 @@ const Header = (props) => {
                 }
 
                 { props.hasMenu &&
-                    <div>
+                    <div className="actions">
                         <ul className="links">
                             <li>
                                 <BorderButton text="Contate-me" link="#contact" />
@@ -61,21 +81,16 @@ const Header = (props) => {
                         <span className="blog-item">
                         <BannerButton text="Blog" link="/blog" />
                         </span>
+
+                        <ThemeToggler>
+                            {({ theme, toggleTheme }) => (
+                                <label onClick={ e => changeTheme(theme, toggleTheme) }>
+                                    { themeIcon }
+                                </label>
+                            )}
+                        </ThemeToggler>
                     </div>
                 }
-
-                <ThemeToggler>
-                    {({ theme, toggleTheme }) => (
-                        <label>
-                            <input 
-                                type="checkbox"
-                                onChange={ e => toggleTheme(e.target.checked ? 'dark' : 'light') }
-                                checked={ theme === 'dark' } />
-                                { '' }
-                                Dark mode
-                        </label>
-                    )}
-                </ThemeToggler>
             </div>
         </nav>
     );

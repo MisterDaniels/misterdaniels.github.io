@@ -12,6 +12,17 @@ li {
     justify-content: space-between;
 }
 
+.navbar .menu .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .menu .actions svg {
+    margin-left: 20px;
+    color: var(--mainColor);
+}
+
 .navbar .menu,
 .navbar .menu .links {
     display: flex;
