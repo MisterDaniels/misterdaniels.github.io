@@ -109,13 +109,10 @@ const jobsExperiences = [
         start: new Date('2017', '08'),
         end: new Date('2019', '10'),
         site: 'http://simpatiafm.com.br/novo',
-        role: 'Auxiliar Marketing | TI | Auxiliar Administrativo',
-        description: 'Foi a primeira empresa que trabalhei envolvendo a área da programação, portanto,' +
-            'foi uma das experiências mais marcantes pra mim, principalmente, o fato que tive ' +
-            'que arriscar muita coisa, começar um vida completamente nova. Tive a chance de ' +
-            'conhecer uma arquitetura complexa e muito bem planejada, bem como o primeiro' +
-            'contato com a metodologia do SCRUM e a experiência de mexer naquilo que já ' +
-            'está pronto.',
+        role: 'Auxiliar Marketing <span>&&</span> TI <span>&&</span> Auxiliar Administrativo',
+        description: `
+                    
+        `,
         logo: '/logo-simpatia.png',
         color1: '#ffffff',
         color2: '#ECECEC',
@@ -163,12 +160,9 @@ const jobsExperiences = [
         end: new Date('2018', '07'),
         site: 'https://facebook.com/ybrcursoscn',
         role: 'Professor de Wordpress, Android e GlassFish Server',
-        description: 'Foi a primeira empresa que trabalhei envolvendo a área da programação, portanto,' +
-            'foi uma das experiências mais marcantes pra mim, principalmente, o fato que tive ' +
-            'que arriscar muita coisa, começar um vida completamente nova. Tive a chance de ' +
-            'conhecer uma arquitetura complexa e muito bem planejada, bem como o primeiro' +
-            'contato com a metodologia do SCRUM e a experiência de mexer naquilo que já ' +
-            'está pronto.',
+        description: `
+
+        `,
         logo: '/logo-ybr.png',
         color1: '#2F3855',
         color2: '#424653',
@@ -199,13 +193,13 @@ const jobsExperiences = [
         start: new Date('2017', '01'),
         end: new Date('2017', '08'),
         site: null,
-        role: 'Técnico de Manutenção | Marketing | Desenvolvedor',
-        description: 'Foi a primeira empresa que trabalhei envolvendo a área da programação, portanto,' +
-            'foi uma das experiências mais marcantes pra mim, principalmente, o fato que tive ' +
-            'que arriscar muita coisa, começar um vida completamente nova. Tive a chance de ' +
-            'conhecer uma arquitetura complexa e muito bem planejada, bem como o primeiro' +
-            'contato com a metodologia do SCRUM e a experiência de mexer naquilo que já ' +
-            'está pronto.',
+        role: 'Técnico de Manutenção <span>&&</span> Marketing <span>&&</span> Desenvolvedor',
+        description: `Minha primeira experiência profissional com a TI, onde tive
+            a oportunidade de automatizar processos. Não só no setor da manutenção de hardware/, 
+            software, mas também no desenvolvimento de ferramentas para cadastro de peças, 
+            acompanho do estado da manutenção do item do cliente e processos para facilitar
+            o setor de almoxarifado. Fora isso, fiz o controle do marketing, envolvendo com 
+            mídias frequentes em diversas plataformas.`,
         logo: '/logo-faz-tudo.png',
         color1: '#000000',
         color2: '#000000',

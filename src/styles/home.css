@@ -188,6 +188,10 @@
     margin-left: 5%;
 }
 
+#experiences .job-detail h2 span {
+    color: var(--mainColor);
+}
+
 #experiences .job-detail .localizations {
     display: flex;
     flex-direction: column;
