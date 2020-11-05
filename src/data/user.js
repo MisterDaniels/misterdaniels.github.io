@@ -6,25 +6,25 @@ const userInformation = {
     email: 'dodosilva51@gmail.com',
     bio: () => { 
             return(
-                <div>
+                <div class="bio-text">
                     <p>
-                        - Um carinha aí, que curte replicar algumas coisas, entender algumas outras e 
+                        Um carinha aí, que curte replicar algumas coisas, entender algumas outras e 
                         deixar a cabeça fluir nas <strong>ideias</strong> 🧠 
                     </p>
                     <p> 
-                        - Joga um <strong>game</strong> e acha que cada <strong>música</strong> tem a hora certa (ou vice-versa 🤔) 🎼 
+                        Joga um <strong>game</strong> e acha que cada <strong>música</strong> tem a hora certa (ou vice-versa 🤔) 🎼 
                     </p>
                     <p>
-                        - Apaixonado pelos <strong>terrores</strong>, por uns papos de <strong>espaço</strong> e <strong>jogos</strong> 😱🌌🎮
+                        Apaixonado pelos <strong>terrores</strong>, por uns papos de <strong>espaço</strong> e <strong>jogos</strong> 😱🌌🎮
                     </p>
                     <p>
-                        - Conhece uns par de tecnologias mas mal consegue sair do <strong>Hello World</strong> 👋🌎
+                        Conhece uns par de tecnologias mas mal consegue sair do <strong>Hello World</strong> 👋🌎
                     </p>
                     <p>
-                        - Mistura uns inglês e português nas coisas, é uma sopa 🍲
+                        Mistura uns inglês e português nas coisas, é uma sopa 🍲
                     </p>
                     <p>
-                        - E aquele <strong>emoji</strong> certo vale mais que mil palavras 😄
+                        E aquele <strong>emoji</strong> certo vale mais que mil palavras 😄
                     </p>
                 </div>
             )
