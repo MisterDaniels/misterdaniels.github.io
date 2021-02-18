@@ -93,12 +93,12 @@ export default (props) => {
                 }}
                 validationSchema={FormSchema}
                 onSubmit={ (values, { setSubmitting, resetForm }) => {
-                    if (!isVerified) {
+                    if (!isVerified && process.env.GASTSBY_ACTIVE_ENV === 'production') {
                         setSubmitting(false);
                         return notifyUnsuccessCaptcha();
                     }
                     
-                    emailjs.sendForm('gmail', 'website', '.form form', 'user_nhiF1ZJwT7gAZ460eYG3V')
+                    emailjs.sendForm('gmail', 'website', '.form form', 'user_72ngn3LV8EAyp0w2NtgEl')
                         .then((res) => {
                             notifySuccess();
                             resetForm();

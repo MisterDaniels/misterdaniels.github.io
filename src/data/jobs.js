@@ -13,7 +13,10 @@ import {
     FaWordpress,
     FaGithub,
     FaAndroid,
-    FaMicrosoft
+    FaMicrosoft,
+    FaBootstrap,
+    FaDiscord,
+    FaAws
 } from 'react-icons/fa';
 
 import {
@@ -23,6 +26,22 @@ import {
 import {
     GiTechnoHeart
 } from 'react-icons/gi';
+
+import {
+    DiComposer
+} from 'react-icons/di';
+
+import {
+    SiJest,
+    SiMocha,
+    SiJenkins,
+    SiMariadb,
+    SiRedis,
+    SiSlack,
+    SiGrafana,
+    SiKibana,
+    SiPrometheus
+} from 'react-icons/si';
 
 import SimpleIcon from 'simple-icons-react-component';
 
@@ -41,12 +60,12 @@ const jobsExperiences = [
         end: null,
         site: 'https://auryn.com.br',
         role: 'Desenvolvedor Full-Stack',
-        description: 'Foi a primeira empresa que trabalhei envolvendo a área da programação, portanto,' +
+        description: 'Foi a primeira empresa que trabalhei envolvendo a área da programação, portanto, ' +
             'foi uma das experiências mais marcantes pra mim, principalmente, o fato que tive ' +
             'que arriscar muita coisa, começar um vida completamente nova. Tive a chance de ' +
-            'conhecer uma arquitetura complexa e muito bem planejada, bem como o primeiro' +
-            'contato com a metodologia do SCRUM e a experiência de mexer naquilo que já ' +
-            'está pronto.',
+            'conhecer uma arquitetura complexa e muito bem planejada, bem como o primeiro ' +
+            'contato com a metodologia do SCRUM e as oportunidades de utilizar diversas ' +
+            'ferramentas e as melhores tecnologias do mercado.',
         logo: '/logo-auryn.svg',
         color1: '#02BCD3',
         color2: '#17BAB5',
@@ -94,6 +113,62 @@ const jobsExperiences = [
             {
                 title: 'HTML5',
                 icon: <FaHtml5 size={33} />
+            },
+            {
+                title: 'Composer',
+                icon: <DiComposer size={33} />
+            },
+            {
+                title: 'Jest',
+                icon: <SiJest size={33} />
+            },
+            {
+                title: 'Mocha',
+                icon: <SiMocha size={33} />
+            },
+            {
+                title: 'Bootstrap',
+                icon: <FaBootstrap size={33} />
+            },
+            {
+                title: 'AWS',
+                icon: <FaAws size={33} />
+            },
+            {
+                title: 'Discord',
+                icon: <FaDiscord size={33} />
+            },
+            {
+                title: 'Slack',
+                icon: <SiSlack size={33} />
+            },
+            {
+                title: 'Wordpres',
+                icon: <FaWordpress size={33} />
+            },
+            {
+                title: 'Jenkins',
+                icon: <SiJenkins size={33} />
+            },
+            {
+                title: 'MariaDB',
+                icon: <SiMariadb size={33} />
+            },
+            {
+                title: 'Redis',
+                icon: <SiRedis size={33} />
+            },
+            {
+                title: 'Grafana',
+                icon: <SiGrafana size={33} />
+            },
+            {
+                title: 'Kibana',
+                icon: <SiKibana size={33} />
+            },
+            {
+                title: 'Prometheus',
+                icon: <SiPrometheus size={33} />
             }
         ]
     },
@@ -109,10 +184,13 @@ const jobsExperiences = [
         start: new Date('2017', '08'),
         end: new Date('2019', '10'),
         site: 'http://simpatiafm.com.br/novo',
-        role: 'Auxiliar Marketing <span>&&</span> TI <span>&&</span> Auxiliar Administrativo',
-        description: `
-                    
-        `,
+        role: 'Auxiliar Marketing - TI - Auxiliar Administrativo',
+        description: 'Dentro da Rádio Simpatia FM, tive a oportunidade de desempenhar a criatividade ' +
+            'dentro de estratégias de marketing, engajando leads através metodologias de publicidade  ' +
+            'para com os clientes da empresa. Com isso, aprendi a utilizar as melhores ferramentas do ' +
+            'mercado do design, construindo mídias estáticas ou animadas, através de artes de posts ou ' +
+            'vídeos. Além disso, faziamos reuniões para decisões e criações de novas ideias, prestando ' +
+            'uma espécie de consultoria para com os clientes.',
         logo: '/logo-simpatia.png',
         color1: '#ffffff',
         color2: '#ECECEC',
