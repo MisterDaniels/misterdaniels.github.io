@@ -4,6 +4,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { FaMoon, FaRegMoon } from 'react-icons/fa';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
+import Seo from '../Seo';
 import BorderButton from '../Buttons/BorderButton';
 import BannerButton from '../Buttons/BannerButton';
 
@@ -50,6 +51,7 @@ const Header = (props) => {
     
     return(
         <nav className="navbar">
+            <Seo />
             { typeof window !== `undefined` && window.location.href.match(/((\/)+(blog)(\/)?)$/) &&
                 <span className="banner"></span>
             }
