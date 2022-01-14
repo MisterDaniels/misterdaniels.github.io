@@ -147,13 +147,7 @@ const projects = [
     },
     {
         title: 'Sistema de acompanhamento de noticias de jogos',
-        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
-            customizados para o Elementor. Esses elementos, possuem toda uma logica para
-            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
-            customizados atraves de presets e de recursos nativos do proprio Elementor.
-            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
-            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
-            de recursos do Elementor para padroes de estilizacao.`,
+        description: ``,
         media: '',
         link: '',
         categories: [
@@ -170,13 +164,7 @@ const projects = [
     },
     {
         title: 'Situacao dos nomes no Brasil',
-        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
-            customizados para o Elementor. Esses elementos, possuem toda uma logica para
-            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
-            customizados atraves de presets e de recursos nativos do proprio Elementor.
-            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
-            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
-            de recursos do Elementor para padroes de estilizacao.`,
+        description: ``,
         media: '',
         link: 'https://github.com/MisterDaniels/ibge-names',
         categories: [
@@ -196,13 +184,7 @@ const projects = [
     },
     {
         title: 'Blog pessoal',
-        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
-            customizados para o Elementor. Esses elementos, possuem toda uma logica para
-            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
-            customizados atraves de presets e de recursos nativos do proprio Elementor.
-            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
-            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
-            de recursos do Elementor para padroes de estilizacao.`,
+        description: ``,
         media: '',
         link: 'https://misterdaniels.github.io/blog',
         categories: [
@@ -228,13 +210,7 @@ const projects = [
     },
     {
         title: 'Cuidar do Pokemon utilizando PokeAPI',
-        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
-            customizados para o Elementor. Esses elementos, possuem toda uma logica para
-            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
-            customizados atraves de presets e de recursos nativos do proprio Elementor.
-            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
-            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
-            de recursos do Elementor para padroes de estilizacao.`,
+        description: ``,
         media: '',
         link: 'https://github.com/MisterDaniels/PokemonAPIConsume',
         categories: [
@@ -267,13 +243,7 @@ const projects = [
     },
     {
         title: 'Sistema de agendamento de manicure/pedicure',
-        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
-            customizados para o Elementor. Esses elementos, possuem toda uma logica para
-            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
-            customizados atraves de presets e de recursos nativos do proprio Elementor.
-            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
-            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
-            de recursos do Elementor para padroes de estilizacao.`,
+        description: ``,
         media: '',
         link: 'https://github.com/MisterDaniels/PokemonAPIConsume',
         categories: [
@@ -327,13 +297,7 @@ const projects = [
     },
     {
         title: 'COVID-19 noticia de casos diario',
-        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
-            customizados para o Elementor. Esses elementos, possuem toda uma logica para
-            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
-            customizados atraves de presets e de recursos nativos do proprio Elementor.
-            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
-            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
-            de recursos do Elementor para padroes de estilizacao.`,
+        description: ``,
         media: '',
         link: 'https://github.com/MisterDaniels/covid19-discord-bot',
         categories: [
@@ -356,13 +320,7 @@ const projects = [
     },
     {
         title: 'Portal de palestras Expo Videira 2020',
-        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
-            customizados para o Elementor. Esses elementos, possuem toda uma logica para
-            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
-            customizados atraves de presets e de recursos nativos do proprio Elementor.
-            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
-            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
-            de recursos do Elementor para padroes de estilizacao.`,
+        description: ``,
         media: '',
         link: 'https://github.com/MisterDaniels/covid19-discord-bot',
         categories: [
@@ -380,6 +338,192 @@ const projects = [
             },
             {
                 title: 'Electron'
+            }
+        ]
+    },
+    {
+        title: 'Portal para gerenciamento de personagem do jogo',
+        description: ``,
+        media: '',
+        link: 'https://github.com/MisterDaniels/poketibia-project/tree/master/website',
+        categories: [
+            'Desenvolvimento'
+        ],
+        tecnologies: [
+            {
+                title: 'Node.js'
+            },
+            {
+                title: 'Express'
+            },
+            {
+                title: 'Vuex'
+            },
+            {
+                title: 'Vue'
+            },
+            {
+                title: 'Mysql'
+            },
+            {
+                title: 'Passport'
+            }
+        ]
+    },
+    {
+        title: 'Projeto Semana Omnistack 11',
+        description: ``,
+        media: '',
+        link: 'https://github.com/MisterDaniels/semana-omnistack-11',
+        categories: [
+            'Desenvolvimento'
+        ],
+        tecnologies: [
+            {
+                title: 'Node.js'
+            },
+            {
+                title: 'Express'
+            },
+            {
+                title: 'React'
+            },
+            {
+                title: 'Expo'
+            },
+            {
+                title: 'React Native'
+            },
+            {
+                title: 'SQLite'
+            }
+        ]
+    },
+    {
+        title: 'Sistema para aluguel de carros',
+        description: ``,
+        media: '',
+        link: 'https://github.com/MisterDaniels/car-seller-front',
+        categories: [
+            'Desenvolvimento'
+        ],
+        tecnologies: [
+            {
+                title: 'Node.js'
+            },
+            {
+                title: 'Typescript'
+            },
+            {
+                title: 'React'
+            },
+            {
+                title: 'Styled-components'
+            },
+            {
+                title: 'Fontawesome'
+            },
+            {
+                title: 'Tailwind'
+            },
+            {
+                title: 'Sass'
+            }
+        ]
+    },
+    {
+        title: 'Pokemon 2D baseado em turno',
+        description: ``,
+        media: '',
+        link: 'https://github.com/MisterDaniels/pokemon-unity',
+        categories: [
+            'Desenvolvimento',
+            'Jogos'
+        ],
+        tecnologies: [
+            {
+                title: 'Unity'
+            },
+            {
+                title: 'DOTween'
+            },
+            {
+                title: 'C#'
+            }
+        ]
+    },
+    {
+        title: 'MMORPG 2D',
+        description: ``,
+        media: '',
+        link: 'https://github.com/MisterDaniels/phaser-mmorpg-client',
+        categories: [
+            'Desenvolvimento',
+            'Jogos'
+        ],
+        tecnologies: [
+            {
+                title: 'Phaser'
+            },
+            {
+                title: 'Node.js'
+            },
+            {
+                title: 'Express'
+            },
+            {
+                title: 'Socket.IO'
+            },
+            {
+                title: 'Eslint'
+            },
+            {
+                title: 'Webpack'
+            },
+            {
+                title: 'Javascript'
+            }
+        ]
+    },
+    {
+        title: 'Pokemon 2D',
+        description: ``,
+        media: '',
+        link: 'https://github.com/MisterDaniels/pokemon-defold',
+        categories: [
+            'Desenvolvimento',
+            'Jogos'
+        ],
+        tecnologies: [
+            {
+                title: 'Defold'
+            },
+            {
+                title: 'Lua'
+            },
+            {
+                title: 'Nakama'
+            },
+            {
+                title: 'CockroachDB'
+            }
+        ]
+    },
+    {
+        title: 'Jogo de plataforma',
+        description: ``,
+        media: '',
+        link: 'https://github.com/MisterDaniels/platformer-game-py',
+        categories: [
+            'Desenvolvimento',
+            'Jogos'
+        ],
+        tecnologies: [
+            {
+                title: 'Python'
+            },
+            {
+                title: 'PyGame'
             }
         ]
     }
