@@ -37,6 +37,9 @@ export default ({ data }) => {
 
     const { edges: posts } = data.allMdx;
 
+    const currentWorkYears = moment().diff(jobs.areasExperiences.programmer.startTime, 'years');
+    const currentWorkMonths = moment().diff(jobs.areasExperiences.programmer.startTime, 'months') - (currentWorkYears * 12);
+
     return(
         <div>
             <ToastContainer />
@@ -129,9 +132,15 @@ export default ({ data }) => {
                                         <div className="detail">
                                             <FaCode size={50} color="#F55547" />
                                             <h3 className="time">
-                                                { moment().diff(jobs.areasExperiences.programmer.startTime, 'months') }
+                                                { currentWorkYears }
                                             </h3>
-                                            <p className="time-desc">meses</p>
+                                            <p className="time-desc">anos</p>
+                                            <h3 className="time">
+                                                { currentWorkMonths }
+                                            </h3>
+                                            <p className="time-desc">
+                                                { currentWorkMonths > 1 ? 'meses' : 'mês' }
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="role-item">

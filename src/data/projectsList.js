@@ -54,98 +54,332 @@ const projects = [
         ]
     },
     {
-        title: 'Vídeo isometric',
-        description: `Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. 
-            Manduma pindureta quium dia nois paga. Posuere libero varius. Nullam a nisl ut ante 
-            blandit hendrerit. Aenean sit amet nisi. Per aumento de cachacis, eu reclamis.
-            Aenean aliquam molestie leo, vitae iaculis nisl. Todo mundo vê os porris que eu tomo,
-            mas ninguém vê os tombis que eu levo! In elementis mé pra quem é amistosis quis leo. 
-            Interagi no mé, cursus quis, vehicula ac nisi.`,
-        media: <YouTube videoId="GDhH3hh-YmE" opts={ youtubeOptions } />,
-        link: 'google.com',
+        title: 'Pokemon-Java-Battle-Simulator',
+        description: `Desenvolvimento de um jogo utilizando a linguagem Java.
+            Todo baseado em interação com interface, possui sistemas de captura
+            de Pokémons, sistema de lojas (venda/compra de itens), gerenciamento
+            de itens, sistema de batalha e nível de Pokémons.`,
+        media: '',
+        link: 'https://github.com/MisterDaniels/Pokemon-Java-Battle-Simulator',
         categories: [
-            'Vídeos', 
+            'Desenvolvimento', 
             'Jogos'
         ],
         tecnologies: [
             {
-                title: 'After Effects'
+                title: 'Netbeans'
             },
             {
-                title: 'Adobe Photoshop'
+                title: 'Java'
             },
             {
-                title: 'Sony Vegas'
+                title: 'Photoshop'
             },
             {
-                title: 'Sound Forge'
-            },
-            {
-                title: 'Artlist.io'
+                title: 'Swing'
             }
         ]
     },
     {
-        title: 'Vídeo isometric',
-        description: `Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. 
-            Manduma pindureta quium dia nois paga. Posuere libero varius. Nullam a nisl ut ante 
-            blandit hendrerit. Aenean sit amet nisi. Per aumento de cachacis, eu reclamis.
-            Aenean aliquam molestie leo, vitae iaculis nisl. Todo mundo vê os porris que eu tomo,
-            mas ninguém vê os tombis que eu levo! In elementis mé pra quem é amistosis quis leo. 
-            Interagi no mé, cursus quis, vehicula ac nisi.`,
-        media: <YouTube videoId="GDhH3hh-YmE" opts={ youtubeOptions } />,
-        link: 'google.com',
+        title: 'Sistema de eleição',
+        description: `
+        `, 
+        media: '',
+        link: '',
         categories: [
-            'Vídeos', 
-            'Jogos'
+            'Desenvolvimento'
         ],
         tecnologies: [
             {
-                title: 'After Effects'
+                title: 'Node.js'
             },
             {
-                title: 'Adobe Photoshop'
+                title: 'Javascript'
             },
             {
-                title: 'Sony Vegas'
+                title: 'Express'
             },
             {
-                title: 'Sound Forge'
+                title: 'Passport'
             },
             {
-                title: 'Artlist.io'
+                title: 'MongoDB'
+            },
+            {
+                title: 'React'
+            },
+            {
+                title: 'Expo'
+            },
+            {
+                title: 'React Native'
             }
         ]
     },
     {
-        title: 'Vídeo isometric',
-        description: `Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. 
-            Manduma pindureta quium dia nois paga. Posuere libero varius. Nullam a nisl ut ante 
-            blandit hendrerit. Aenean sit amet nisi. Per aumento de cachacis, eu reclamis.
-            Aenean aliquam molestie leo, vitae iaculis nisl. Todo mundo vê os porris que eu tomo,
-            mas ninguém vê os tombis que eu levo! In elementis mé pra quem é amistosis quis leo. 
-            Interagi no mé, cursus quis, vehicula ac nisi.`,
-        media: <YouTube videoId="GDhH3hh-YmE" opts={ youtubeOptions } />,
-        link: 'google.com',
+        title: 'Widget para Elementor',
+        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
+            customizados para o Elementor. Esses elementos, possuem toda uma logica para
+            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
+            customizados atraves de presets e de recursos nativos do proprio Elementor.
+            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
+            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
+            de recursos do Elementor para padroes de estilizacao.`,
+        media: '',
+        link: '',
         categories: [
-            'Vídeos', 
+            'Desenvolvimento'
+        ],
+        tecnologies: [
+            {
+                title: 'Wordpress'
+            },
+            {
+                title: 'PHP'
+            },
+            {
+                title: 'Elementor'
+            },
+            {
+                title: 'l10n'
+            }
+        ]
+    },
+    {
+        title: 'Sistema de acompanhamento de noticias de jogos',
+        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
+            customizados para o Elementor. Esses elementos, possuem toda uma logica para
+            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
+            customizados atraves de presets e de recursos nativos do proprio Elementor.
+            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
+            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
+            de recursos do Elementor para padroes de estilizacao.`,
+        media: '',
+        link: '',
+        categories: [
+            'Artes'
+        ],
+        tecnologies: [
+            {
+                title: 'Adobe XD'
+            },
+            {
+                title: 'Photoshop'
+            }
+        ]
+    },
+    {
+        title: 'Situacao dos nomes no Brasil',
+        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
+            customizados para o Elementor. Esses elementos, possuem toda uma logica para
+            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
+            customizados atraves de presets e de recursos nativos do proprio Elementor.
+            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
+            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
+            de recursos do Elementor para padroes de estilizacao.`,
+        media: '',
+        link: 'https://github.com/MisterDaniels/ibge-names',
+        categories: [
+            'Desenvolvimento'
+        ],
+        tecnologies: [
+            {
+                title: 'Netlify'
+            },
+            {
+                title: 'React'
+            },
+            {
+                title: 'Chart.js'
+            }
+        ]
+    },
+    {
+        title: 'Blog pessoal',
+        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
+            customizados para o Elementor. Esses elementos, possuem toda uma logica para
+            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
+            customizados atraves de presets e de recursos nativos do proprio Elementor.
+            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
+            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
+            de recursos do Elementor para padroes de estilizacao.`,
+        media: '',
+        link: 'https://misterdaniels.github.io/blog',
+        categories: [
+            'Desenvolvimento'
+        ],
+        tecnologies: [
+            {
+                title: 'MDX'
+            },
+            {
+                title: 'GraphQL'
+            },
+            {
+                title: 'Gatsby'
+            },
+            {
+                title: 'React'
+            },
+            {
+                title: 'Disqus'
+            }
+        ]
+    },
+    {
+        title: 'Cuidar do Pokemon utilizando PokeAPI',
+        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
+            customizados para o Elementor. Esses elementos, possuem toda uma logica para
+            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
+            customizados atraves de presets e de recursos nativos do proprio Elementor.
+            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
+            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
+            de recursos do Elementor para padroes de estilizacao.`,
+        media: '',
+        link: 'https://github.com/MisterDaniels/PokemonAPIConsume',
+        categories: [
+            'Desenvolvimento',
             'Jogos'
         ],
         tecnologies: [
             {
-                title: 'After Effects'
+                title: 'Javascript'
             },
             {
-                title: 'Adobe Photoshop'
+                title: 'JQuery'
             },
             {
-                title: 'Sony Vegas'
+                title: 'Socket.IO'
             },
             {
-                title: 'Sound Forge'
+                title: 'Bootstrap'
             },
             {
-                title: 'Artlist.io'
+                title: 'Express'
+            },
+            {
+                title: 'Node.js'
+            },
+            {
+                title: 'Google Maps'
+            }
+        ]
+    },
+    {
+        title: 'Sistema de agendamento de manicure/pedicure',
+        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
+            customizados para o Elementor. Esses elementos, possuem toda uma logica para
+            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
+            customizados atraves de presets e de recursos nativos do proprio Elementor.
+            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
+            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
+            de recursos do Elementor para padroes de estilizacao.`,
+        media: '',
+        link: 'https://github.com/MisterDaniels/PokemonAPIConsume',
+        categories: [
+            'Desenvolvimento',
+            'Artes'
+        ],
+        tecnologies: [
+            {
+                title: 'Figma'
+            },
+            {
+                title: 'Storybook'
+            },
+            {
+                title: 'Bit'
+            },
+            {
+                title: 'React'
+            },
+            {
+                title: 'Next.js'
+            },
+            {
+                title: 'MongoDB'
+            },
+            {
+                title: 'Node.js'
+            },
+            {
+                title: 'Passport'
+            },
+            {
+                title: 'Express'
+            },
+            {
+                title: 'Stripe'
+            },
+            {
+                title: 'Jest'
+            },
+            {
+                title: 'intl'
+            },
+            {
+                title: 'Expo'
+            },
+            {
+                title: 'React Native'
+            }
+        ]
+    },
+    {
+        title: 'COVID-19 noticia de casos diario',
+        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
+            customizados para o Elementor. Esses elementos, possuem toda uma logica para
+            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
+            customizados atraves de presets e de recursos nativos do proprio Elementor.
+            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
+            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
+            de recursos do Elementor para padroes de estilizacao.`,
+        media: '',
+        link: 'https://github.com/MisterDaniels/covid19-discord-bot',
+        categories: [
+            'Desenvolvimento'
+        ],
+        tecnologies: [
+            {
+                title: 'Discord'
+            },
+            {
+                title: 'Bot'
+            },
+            {
+                title: 'Google Cloud'
+            },
+            {
+                title: 'Node.js'
+            }
+        ]
+    },
+    {
+        title: 'Portal de palestras Expo Videira 2020',
+        description: `Aplicacao que envolve um plugin para gerenciamento de elementos
+            customizados para o Elementor. Esses elementos, possuem toda uma logica para
+            funcionarem, sendo assim, requisitam de API para coleta de dados, podem ser
+            customizados atraves de presets e de recursos nativos do proprio Elementor.
+            Todo o projeto foi visionado em manter bons padroes e costumes, criando assim, 
+            padroes para traducao de texto posterior(l10n), possibilidade de utilizacao
+            de recursos do Elementor para padroes de estilizacao.`,
+        media: '',
+        link: 'https://github.com/MisterDaniels/covid19-discord-bot',
+        categories: [
+            'Desenvolvimento'
+        ],
+        tecnologies: [
+            {
+                title: 'Node.js'
+            },
+            {
+                title: 'Express'
+            },
+            {
+                title: 'PostgreSQL'
+            },
+            {
+                title: 'Electron'
             }
         ]
     }
