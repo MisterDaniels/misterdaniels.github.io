@@ -80,9 +80,6 @@ const Header = (props) => {
                                 <BorderButton text="Contate-me" link="#contact" />
                             </li>
                         </ul>
-                        <span className="blog-item">
-                        <BannerButton text="Blog" link="/blog" />
-                        </span>
 
                         <ThemeToggler>
                             {({ theme, toggleTheme }) => (

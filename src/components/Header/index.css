@@ -55,19 +55,6 @@ li {
     height: 100%;
 }
 
-.blog-item {
-    position: fixed;
-    top: 0;
-    left: 35%;
-    padding-top: 20px;
-    transform: translateY(-55px);
-    background-color: #F55547;
-}
-
-.blog-item:hover {
-    transform: translateY(0px);
-}
-
 .banner {
     position: absolute;
     width: 94px;

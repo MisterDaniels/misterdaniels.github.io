@@ -8,14 +8,14 @@ const userInformation = {
             return(
                 <div class="bio-text">
                     <p>
-                        Um carinha aí, que curte replicar algumas coisas, entender algumas outras e 
-                        deixar a cabeça fluir nas <strong>ideias</strong> 🧠 
+                        Tentativa de gamer 🎮, criativo para nomes de playlists 🎵, miniatura em bodybuilder 💪 e péssimo imitador  
                     </p>
                     <p> 
-                        Joga um <strong>game</strong> e acha que cada <strong>música</strong> tem a hora certa (ou vice-versa 🤔) 🎼 
+                        Desenvolve alguns <strong>games</strong> e na maioria das vezes o assunto é 
+                        Pokémon, por que será? 🤔 
                     </p>
                     <p>
-                        Apaixonado pelos <strong>terrores</strong>, por uns papos de <strong>espaço</strong> e <strong>jogos</strong> 😱🌌🎮
+                        Apaixonado por motocar 🏍️ e nas aventuras que as 2 rodas proporcionam
                     </p>
                     <p>
                         Conhece uns par de tecnologias mas mal consegue sair do <strong>Hello World</strong> 👋🌎
@@ -32,17 +32,17 @@ const userInformation = {
     avatarJokes: [
         {
             emoji: {
-                name: 'man-facepalming',
-                text: '🤦‍♂️'
+                name: 'circus-tent',
+                text: '🎪'
             },
-            message: 'ÉÉÉ... Só tenho essa foto'
+            message: 'Dev in circus...'
         },
         {
             emoji: {
-                name: 'grinning-squinting-face',
-                text: '😆'
+                name: 'blushing',
+                text: '😊'
             },
-            message: 'Essa cara merece um meme'
+            message: 'A wild selfie appears!'
         }
     ],
     social: [
